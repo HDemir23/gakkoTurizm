@@ -122,6 +122,23 @@ export const dictionaries = {
       button: "Tasima talebi olustur",
       success: "Talep taslagi hazirlandi. Yuk, belge ve rota bilgileri operasyon on kontrolune aktarilacak."
     },
+    contact: {
+      eyebrow: "Direkt iletisim",
+      title: "Teklif, evrak veya rota icin dogru kanali secin.",
+      text: "Telefonla hizli gorusun, e-posta ile yuk detaylarini gonderin veya konumu haritada acin.",
+      mailSubject: "GakkoTransport23 tasima talebi",
+      channels: {
+        phone: { label: "Telefon", action: "Ara" },
+        email: { label: "E-posta", action: "Mail ac" },
+        whatsapp: { label: "WhatsApp", action: "Mesaj yaz" },
+        address: { label: "Adres", action: "Haritada ac" }
+      },
+      footerLinks: {
+        phone: "Ara",
+        email: "Mail gonder",
+        address: "Harita"
+      }
+    },
     footer: "Belge, rota ve yuk uygunlugu on kontroluyle kara yolu tasimaciligi."
   },
   en: {
@@ -235,6 +252,23 @@ export const dictionaries = {
       button: "Create transport request",
       success: "Request draft prepared. Cargo, document and route details will move to operations pre-check."
     },
+    contact: {
+      eyebrow: "Direct contact",
+      title: "Choose the right channel for quotes, documents or routes.",
+      text: "Call for quick coordination, send cargo details by email or open the address in maps.",
+      mailSubject: "GakkoTransport23 transport request",
+      channels: {
+        phone: { label: "Phone", action: "Call" },
+        email: { label: "Email", action: "Open mail" },
+        whatsapp: { label: "WhatsApp", action: "Message" },
+        address: { label: "Address", action: "Open map" }
+      },
+      footerLinks: {
+        phone: "Call",
+        email: "Email",
+        address: "Map"
+      }
+    },
     footer: "Road transport with document, route and cargo-fit pre-checks."
   },
   ru: {
@@ -327,6 +361,23 @@ export const dictionaries = {
       },
       button: "Создать заявку",
       success: "Черновик заявки подготовлен. После добавления адреса отправки форма пойдет напрямую в операцию."
+    },
+    contact: {
+      eyebrow: "Прямой контакт",
+      title: "Выберите канал для расчета, документов или маршрута.",
+      text: "Позвоните для быстрой координации, отправьте данные груза по email или откройте адрес на карте.",
+      mailSubject: "Заявка на перевозку GakkoTransport23",
+      channels: {
+        phone: { label: "Телефон", action: "Позвонить" },
+        email: { label: "Email", action: "Открыть почту" },
+        whatsapp: { label: "WhatsApp", action: "Написать" },
+        address: { label: "Адрес", action: "Открыть карту" }
+      },
+      footerLinks: {
+        phone: "Телефон",
+        email: "Email",
+        address: "Карта"
+      }
     },
     footer: "Автоперевозки с предварительной проверкой документов, маршрута и пригодности груза."
   },
@@ -422,6 +473,23 @@ export const dictionaries = {
       button: "Anfrage erstellen",
       success: "Anfrageentwurf vorbereitet. Sobald eine Empfangsadresse hinterlegt ist, lauft das Formular direkt in die Operation."
     },
+    contact: {
+      eyebrow: "Direkter Kontakt",
+      title: "Wahlen Sie den passenden Kanal fur Angebot, Dokumente oder Route.",
+      text: "Rufen Sie fur schnelle Abstimmung an, senden Sie Frachtdaten per E-Mail oder offnen Sie die Adresse in Maps.",
+      mailSubject: "GakkoTransport23 Transportanfrage",
+      channels: {
+        phone: { label: "Telefon", action: "Anrufen" },
+        email: { label: "E-Mail", action: "Mail offnen" },
+        whatsapp: { label: "WhatsApp", action: "Nachricht" },
+        address: { label: "Adresse", action: "Karte offnen" }
+      },
+      footerLinks: {
+        phone: "Anrufen",
+        email: "E-Mail",
+        address: "Karte"
+      }
+    },
     footer: "Straßentransport mit Vorprufung von Dokumenten, Route und Frachteignung."
   },
   ro: {
@@ -515,6 +583,23 @@ export const dictionaries = {
       },
       button: "Creeaza cerere",
       success: "Sablonul cererii este pregatit. Dupa adaugarea unei adrese de primire, formularul va merge direct catre operatiuni."
+    },
+    contact: {
+      eyebrow: "Contact direct",
+      title: "Alege canalul potrivit pentru oferta, documente sau ruta.",
+      text: "Suna pentru coordonare rapida, trimite detaliile marfii pe email sau deschide adresa in harta.",
+      mailSubject: "Cerere transport GakkoTransport23",
+      channels: {
+        phone: { label: "Telefon", action: "Suna" },
+        email: { label: "Email", action: "Deschide mail" },
+        whatsapp: { label: "WhatsApp", action: "Mesaj" },
+        address: { label: "Adresa", action: "Deschide harta" }
+      },
+      footerLinks: {
+        phone: "Suna",
+        email: "Email",
+        address: "Harta"
+      }
     },
     footer: "Transport rutier cu preverificare de documente, ruta si potrivire marfa."
   }
