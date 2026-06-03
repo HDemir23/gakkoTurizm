@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "../components/HeroTruckImage.css";
+import "../components/HeroMedia.css";
 import "../components/Header.css";
 import "../components/Hero.css";
 import "../components/Capabilities.css";
@@ -11,7 +11,7 @@ import "../components/QuoteSection.css";
 export const metadata: Metadata = {
   title: "GakkoTransport23 | International Road Transport",
   description:
-    "Burgundy-white multilingual transport landing page with an animated 3D truck scene."
+    "Burgundy-white multilingual transport landing page for international road transport."
 };
 
 export default function RootLayout({

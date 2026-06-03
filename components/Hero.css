@@ -1,10 +1,12 @@
 .hero {
   position: relative;
+  z-index: 1;
   min-height: 100svh;
   padding: calc(var(--header-height) + 68px) var(--page-gutter) 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  isolation: isolate;
   overflow: clip;
   color: var(--white);
 }
@@ -12,13 +14,15 @@
 .hero-gradient {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background:
     linear-gradient(180deg, rgba(18, 10, 12, 0.16), rgba(52, 7, 18, 0.2) 72%, rgba(52, 7, 18, 0.74)),
     linear-gradient(90deg, rgba(52, 7, 18, 0.92), rgba(122, 16, 36, 0.46) 46%, rgba(52, 7, 18, 0.12));
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
@@ -88,6 +92,8 @@
 }
 
 .signal-strip {
+  position: relative;
+  z-index: 1;
   width: min(1180px, 100%);
   margin: 34px auto 0;
   display: flex;

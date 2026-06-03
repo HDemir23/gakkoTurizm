@@ -120,7 +120,9 @@ export const dictionaries = {
         cargoPlaceholder: "Palet sayisi, kilo, olcu, teslim tarihi"
       },
       button: "Tasima talebi olustur",
-      success: "Talep taslagi hazirlandi. Yuk, belge ve rota bilgileri operasyon on kontrolune aktarilacak."
+      submitting: "Talep gonderiliyor...",
+      success: "Talebiniz alindi. Yuk, belge ve rota bilgileri operasyon on kontrolune aktarilacak.",
+      error: "Talep gonderilemedi. Lutfen daha sonra tekrar deneyin veya direkt iletisim kanallarini kullanin."
     },
     contact: {
       eyebrow: "Direkt iletisim",
@@ -250,7 +252,9 @@ export const dictionaries = {
         cargoPlaceholder: "Pallet count, weight, dimensions, delivery date"
       },
       button: "Create transport request",
-      success: "Request draft prepared. Cargo, document and route details will move to operations pre-check."
+      submitting: "Sending request...",
+      success: "Your request has been received. Cargo, document and route details will move to operations pre-check.",
+      error: "The request could not be sent. Please try again later or use a direct contact channel."
     },
     contact: {
       eyebrow: "Direct contact",
@@ -360,7 +364,9 @@ export const dictionaries = {
         cargoPlaceholder: "Паллеты, вес, габариты, дата доставки"
       },
       button: "Создать заявку",
-      success: "Черновик заявки подготовлен. После добавления адреса отправки форма пойдет напрямую в операцию."
+      submitting: "Заявка отправляется...",
+      success: "Заявка получена. Данные груза, документов и маршрута будут переданы на операционную проверку.",
+      error: "Заявку не удалось отправить. Попробуйте позже или используйте прямой канал связи."
     },
     contact: {
       eyebrow: "Прямой контакт",
@@ -471,7 +477,9 @@ export const dictionaries = {
         cargoPlaceholder: "Paletten, Gewicht, Maße, Lieferdatum"
       },
       button: "Anfrage erstellen",
-      success: "Anfrageentwurf vorbereitet. Sobald eine Empfangsadresse hinterlegt ist, lauft das Formular direkt in die Operation."
+      submitting: "Anfrage wird gesendet...",
+      success: "Ihre Anfrage wurde empfangen. Fracht-, Dokumenten- und Routendaten gehen in die operative Vorprufung.",
+      error: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es spater erneut oder nutzen Sie einen direkten Kontaktkanal."
     },
     contact: {
       eyebrow: "Direkter Kontakt",
@@ -582,7 +590,9 @@ export const dictionaries = {
         cargoPlaceholder: "Numar paleti, greutate, dimensiuni, data livrarii"
       },
       button: "Creeaza cerere",
-      success: "Sablonul cererii este pregatit. Dupa adaugarea unei adrese de primire, formularul va merge direct catre operatiuni."
+      submitting: "Cererea se trimite...",
+      success: "Cererea a fost primita. Detaliile despre marfa, documente si ruta vor intra in verificarea operationala.",
+      error: "Cererea nu a putut fi trimisa. Incearca din nou mai tarziu sau foloseste un canal de contact direct."
     },
     contact: {
       eyebrow: "Contact direct",

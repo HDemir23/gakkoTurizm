@@ -3,7 +3,7 @@
 import { Capabilities } from "@/components/Capabilities";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { HeroTruckImage } from "@/components/HeroTruckImage";
+import { HeroMedia } from "@/components/HeroMedia";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Process } from "@/components/Process";
 import { QuoteSection } from "@/components/QuoteSection";
@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <LanguageProvider>
-      <HeroTruckImage />
+      <HeroMedia />
       <Header />
       <main>
         <Hero />

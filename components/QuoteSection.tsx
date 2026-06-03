@@ -4,6 +4,8 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { Send } from "lucide-react";
 import { FormEvent, useCallback, useMemo, useState } from "react";
 
+const formspreeEndpoint = "https://formspree.io/f/mgobevyz";
+
 const contactInfo = {
   phoneDisplay: "+90 555 023 00 23",
   phoneHref: "tel:+905550230023",
@@ -16,6 +18,8 @@ const contactInfo = {
 export function QuoteSection() {
   const { dictionary } = useLanguage();
   const [status, setStatus] = useState("");
+  const [statusTone, setStatusTone] = useState<"idle" | "success" | "error">("idle");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const footerContacts = useMemo(
     () => [
@@ -46,31 +50,46 @@ export function QuoteSection() {
   );
 
   const onSubmit = useCallback(
-    (event: FormEvent<HTMLFormElement>) => {
+    async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      const formData = new FormData(event.currentTarget);
-      const body = [
-        `${dictionary.quote.fields.name}: ${formData.get("name") ?? ""}`,
-        `${dictionary.quote.fields.company}: ${formData.get("company") ?? ""}`,
-        `${dictionary.quote.fields.contact}: ${formData.get("contact") ?? ""}`,
-        `${dictionary.quote.fields.route}: ${formData.get("route") ?? ""}`,
-        `${dictionary.quote.fields.cargo}: ${formData.get("cargo") ?? ""}`
-      ].join("\n");
-      const subject = encodeURIComponent(dictionary.contact.mailSubject);
-      const encodedBody = encodeURIComponent(body);
+      const form = event.currentTarget;
+      const formData = new FormData(form);
 
-      setStatus(dictionary.quote.success);
-      event.currentTarget.reset();
-      window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${encodedBody}`;
+      formData.append("subject", dictionary.contact.mailSubject);
+      formData.append("source", "GakkoTransport23 website");
+
+      setIsSubmitting(true);
+      setStatusTone("idle");
+      setStatus(dictionary.quote.submitting);
+
+      try {
+        const response = await fetch(formspreeEndpoint, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Formspree request failed with ${response.status}`);
+        }
+
+        setStatusTone("success");
+        setStatus(dictionary.quote.success);
+        form.reset();
+      } catch {
+        setStatusTone("error");
+        setStatus(dictionary.quote.error);
+      } finally {
+        setIsSubmitting(false);
+      }
     },
     [
       dictionary.contact.mailSubject,
-      dictionary.quote.fields.cargo,
-      dictionary.quote.fields.company,
-      dictionary.quote.fields.contact,
-      dictionary.quote.fields.name,
-      dictionary.quote.fields.route,
-      dictionary.quote.success
+      dictionary.quote.error,
+      dictionary.quote.success,
+      dictionary.quote.submitting
     ]
   );
 
@@ -105,11 +124,11 @@ export function QuoteSection() {
               <span>{dictionary.quote.fields.cargo}</span>
               <textarea name="cargo" rows={4} placeholder={dictionary.quote.fields.cargoPlaceholder} />
             </label>
-            <button className="button button-primary wide" type="submit">
+            <button className="button button-primary wide" type="submit" disabled={isSubmitting}>
               <Send size={18} />
-              <span>{dictionary.quote.button}</span>
+              <span>{isSubmitting ? dictionary.quote.submitting : dictionary.quote.button}</span>
             </button>
-            <p className="form-status wide" aria-live="polite">
+            <p className={`form-status ${statusTone === "error" ? "is-error" : ""} wide`} aria-live="polite">
               {status}
             </p>
           </form>

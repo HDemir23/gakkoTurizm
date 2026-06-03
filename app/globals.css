@@ -90,7 +90,7 @@ main {
   position: relative;
   z-index: 2;
   min-height: 100svh;
-  background: var(--steel-deep);
+  background: transparent;
 }
 
 .eyebrow {
