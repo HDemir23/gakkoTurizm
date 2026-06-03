@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/components/LanguageProvider";
 import { languages, type LanguageCode } from "@/lib/i18n";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, Truck, X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState, type MouseEvent } from "react";
 
 const navItems = [
@@ -69,63 +69,72 @@ export function Header() {
 
   return (
     <header className={headerClassName}>
-      <a className="brand" href="#top" aria-label="GakkoTransport23 home">
-        <span className="brand-mark">G23</span>
-        <span>GakkoTransport23</span>
-      </a>
-
-      <button
-        className="icon-button nav-toggle"
-        type="button"
-        aria-expanded={isMenuOpen}
-        aria-controls="site-nav"
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        onClick={toggleMenu}
-      >
-        {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
-
-      <nav id="site-nav" className={navClassName} aria-label="Primary navigation">
-        {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={closeMenu}>
-            {dictionary.nav[item.key]}
-          </a>
-        ))}
-      </nav>
-
-      <div className={languagePickerClassName}>
-        <button
-          className="language-button"
-          type="button"
-          aria-haspopup="listbox"
-          aria-expanded={isLanguageOpen}
-          aria-controls="language-menu"
-          onClick={toggleLanguage}
-        >
-          <span className="flag" aria-hidden="true">
-            {activeLanguage.flag}
+      <div className="header-shell">
+        <a className="brand" href="#top" aria-label="GakkoTransport23 home">
+          <span className="brand-mark" aria-hidden="true">
+            <Truck size={20} />
           </span>
-          <span>{activeLanguage.code}</span>
-          <ChevronDown size={16} aria-hidden="true" />
-        </button>
+          <span className="brand-copy">
+            <span className="brand-name">GakkoTransport23</span>
+            <span className="brand-tagline">International road transport</span>
+          </span>
+        </a>
 
-        <div id="language-menu" className="language-menu" role="listbox" aria-label="Language">
-          {languageCodes.map((code) => (
+        <nav id="site-nav" className={navClassName} aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} onClick={closeMenu}>
+              {dictionary.nav[item.key]}
+            </a>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <div className={languagePickerClassName}>
             <button
-              key={code}
-              className="language-option"
+              className="language-button"
               type="button"
-              value={code}
-              role="option"
-              aria-selected={code === language}
-              onClick={chooseLanguage}
+              aria-haspopup="listbox"
+              aria-expanded={isLanguageOpen}
+              aria-controls="language-menu"
+              onClick={toggleLanguage}
             >
               <span className="flag" aria-hidden="true">
-                {languages[code].flag}
+                {activeLanguage.flag}
               </span>
-              <span>{languages[code].label}</span>
+              <span>{activeLanguage.code}</span>
+              <ChevronDown size={16} aria-hidden="true" />
             </button>
-          ))}
+
+            <div id="language-menu" className="language-menu" role="listbox" aria-label="Language">
+              {languageCodes.map((code) => (
+                <button
+                  key={code}
+                  className="language-option"
+                  type="button"
+                  value={code}
+                  role="option"
+                  aria-selected={code === language}
+                  onClick={chooseLanguage}
+                >
+                  <span className="flag" aria-hidden="true">
+                    {languages[code].flag}
+                  </span>
+                  <span>{languages[code].label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <button
+            className="icon-button nav-toggle"
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="site-nav"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
     </header>

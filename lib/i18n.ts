@@ -22,7 +22,7 @@ export const dictionaries = {
       eyebrow: "Belgeli uluslararasi kara yolu tasimaciligi",
       title: "GakkoTransport23",
       lead:
-        "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve ozel yuk uygunluk kontroluyle Avrupa hattinda calisan pratik lojistik ekip.",
+        "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve ozel yuk uygunluk kontroluyle Avrupa hattinda planli lojistik hizmeti.",
       primaryCta: "Tasima teklifi al",
       secondaryCta: "Belge kapsami"
     },
@@ -34,7 +34,7 @@ export const dictionaries = {
     signals: ["C2 uyumlu operasyon", "K1 yurtiçi tasima", "U-ETDS bilgi hazirligi", "Ozel yuk on kontrolu"],
     capabilities: {
       eyebrow: "Belge ve uygunluk",
-      title: "Kucuk firma hizi, belgeli tasimaci disiplini.",
+      title: "Esnek operasyon, belgeli tasimaci disiplini.",
       text:
         "Yuk kabulunden once yetki belgesi kapsami, tasit uygunlugu, sefer bildirimi, gumruk evraki ve tehlikeli madde sinifi ayrica kontrol edilir.",
       cards: [
@@ -62,9 +62,9 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Tasima hizmetleri",
-      title: "Komple tir, parsiyel yuk ve proje parcalarinda sahaya yakin takip.",
+      title: "Komple tir, parsiyel yuk ve proje parcalarinda surekli operasyon takibi.",
       text:
-        "Buyuk firma gibi evrakli, kucuk firma gibi hizli calisir: yukleme saati, arac durumu, gumruk evragi ve teslim teyidi ayni hattan takip edilir.",
+        "Yukleme planindan teslim teyidine kadar arac durumu, gumruk evraki ve operasyon guncellemeleri tek koordinasyon surecinde takip edilir.",
       items: [
         {
           title: "Komple tir ve parsiyel tasima",
@@ -107,9 +107,9 @@ export const dictionaries = {
     },
     quote: {
       eyebrow: "Teklif ve sevkiyat",
-      title: "Yukunu, rotani ve gerekli belgeleri gonder; uygun araci ve tasima planini netlestirelim.",
+      title: "Yuk, guzergah ve gerekli belgeleri iletin; uygun araci ve tasima planini netlestirelim.",
       text:
-        "Talep geldikten sonra belge kapsami, yuk sinifi, arac uygunlugu, gumruk evraki ve teslim penceresi hizli on kontrolden gecirilir.",
+        "Talep geldikten sonra belge kapsami, yuk sinifi, arac uygunlugu, gumruk evraki ve teslim penceresi ilk operasyon kontrolunden gecirilir.",
       fields: {
         name: "Ad soyad",
         company: "Firma",
@@ -135,7 +135,7 @@ export const dictionaries = {
       eyebrow: "Document-led international road transport",
       title: "GakkoTransport23",
       lead:
-        "A practical logistics team for C2 / K1 aligned commercial cargo, U-ETDS-ready trip data, document follow-up and special cargo fit checks.",
+        "Planned logistics service for C2 / K1 aligned commercial cargo, U-ETDS-ready trip data, document follow-up and special cargo fit checks.",
       primaryCta: "Get transport quote",
       secondaryCta: "Document scope"
     },
@@ -147,7 +147,7 @@ export const dictionaries = {
     signals: ["C2-aligned operation", "K1 domestic leg", "U-ETDS data ready", "Special cargo pre-check"],
     capabilities: {
       eyebrow: "Documents and fit",
-      title: "Small-company speed with documented carrier discipline.",
+      title: "Flexible operations with documented carrier discipline.",
       text:
         "Before accepting cargo, document scope, vehicle fit, trip data, customs papers and dangerous-goods class are checked.",
       cards: [
@@ -175,9 +175,9 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Transport services",
-      title: "Full truckload, partial cargo and project parts with field-level follow-up.",
+      title: "Full truckload, partial cargo and project parts with consistent operations follow-up.",
       text:
-        "Documented like a large operator, fast like a small one: loading time, vehicle status, customs papers and delivery confirmation stay on one line.",
+        "From loading plan to delivery confirmation, vehicle status, customs paperwork and operations updates are tracked through one coordinated process.",
       items: [
         {
           title: "Full truckload and partial cargo",
@@ -222,7 +222,7 @@ export const dictionaries = {
       eyebrow: "Quote and dispatch",
       title: "Send the load, route and documents; we will clarify the right vehicle and transport plan.",
       text:
-        "After the request, document scope, cargo class, vehicle fit, customs papers and delivery window pass a quick pre-check.",
+        "After the request, document scope, cargo class, vehicle fit, customs papers and delivery window are reviewed in the initial operations check.",
       fields: {
         name: "Full name",
         company: "Company",
@@ -248,7 +248,7 @@ export const dictionaries = {
       eyebrow: "Автологистика европейского стандарта",
       title: "GakkoTransport23",
       lead:
-        "Практичная команда для коммерческих грузов с проверкой разрешений, данных рейса, документов и условий приема специальных грузов.",
+        "Логистическое сопровождение коммерческих грузов с проверкой разрешений, данных рейса, документов и условий приема специальных грузов.",
       primaryCta: "Запросить расчет",
       secondaryCta: "Типы грузов"
     },
@@ -260,7 +260,7 @@ export const dictionaries = {
     signals: ["Операция C2", "Внутренний K1", "Данные U-ETDS", "Проверка спецгруза"],
     capabilities: {
       eyebrow: "Документы и допуск",
-      title: "Скорость небольшой фирмы с дисциплиной документированной перевозки.",
+      title: "Гибкая операционная работа с дисциплиной документированной перевозки.",
       text:
         "Перед приемом груза проверяются разрешения, пригодность машины, данные рейса, таможенные документы и класс груза.",
       cards: [
@@ -284,8 +284,8 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Операционная модель",
-      title: "Полная фура, частичный груз и проектные партии с живым контролем.",
-      text: "Документально как крупный оператор, быстро как небольшая фирма: загрузка, машина, таможня и доставка в одной линии.",
+      title: "Полная фура, частичный груз и проектные партии с постоянным операционным сопровождением.",
+      text: "От плана загрузки до подтверждения доставки статус машины, таможенные документы и операционные обновления ведутся в едином процессе.",
       items: [
         {
           title: "Полная и частичная загрузка",
@@ -315,7 +315,7 @@ export const dictionaries = {
       eyebrow: "Расчет и операция",
       title: "Отправьте маршрут, тип груза и дату доставки; мы уточним план перевозки.",
       text:
-        "После заявки маршрут, пригодность машины, документы и окно доставки уточняются в одном операционном процессе.",
+        "После заявки маршрут, пригодность машины, документы и окно доставки проходят первичную операционную проверку.",
       fields: {
         name: "Имя и фамилия",
         company: "Компания",
@@ -328,7 +328,7 @@ export const dictionaries = {
       button: "Создать заявку",
       success: "Черновик заявки подготовлен. После добавления адреса отправки форма пойдет напрямую в операцию."
     },
-    footer: "Бордово-белые международные автоперевозки."
+    footer: "Автоперевозки с предварительной проверкой документов, маршрута и пригодности груза."
   },
   de: {
     nav: {
@@ -341,7 +341,7 @@ export const dictionaries = {
       eyebrow: "Straßenlogistik nach europäischem Standard",
       title: "GakkoTransport23",
       lead:
-        "Praktische Logistik fur gewerbliche Ladungen mit Dokumentenprufung, Fahrtdaten, Zollabgleich und Eignungsprufung fur Sonderfracht.",
+        "Geplante Logistik fur gewerbliche Ladungen mit Dokumentenprufung, Fahrtdaten, Zollabgleich und Eignungsprufung fur Sonderfracht.",
       primaryCta: "Angebot anfragen",
       secondaryCta: "Frachtumfang"
     },
@@ -353,7 +353,7 @@ export const dictionaries = {
     signals: ["C2-konforme Operation", "K1 Inlandsstrecke", "U-ETDS Daten", "Sonderfracht-Vorprufung"],
     capabilities: {
       eyebrow: "Dokumente und Eignung",
-      title: "Kleine-Firma-Tempo mit dokumentierter Transportdisziplin.",
+      title: "Flexible Operations mit dokumentierter Transportdisziplin.",
       text:
         "Vor Annahme werden Dokumentenumfang, Fahrzeugeignung, Fahrtdaten, Zollpapiere und Frachtklasse gepruft.",
       cards: [
@@ -377,9 +377,9 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Operationsstruktur",
-      title: "Komplettladung, Teilladung und Projektteile mit naher Operationsfuhrung.",
+      title: "Komplettladung, Teilladung und Projektteile mit kontinuierlicher Operationsfuhrung.",
       text:
-        "Dokumentiert wie ein großer Betreiber, schnell wie eine kleine Firma: Ladezeit, Fahrzeugstatus, Zoll und Lieferung bleiben in einer Linie.",
+        "Vom Ladeplan bis zur Lieferbestatigung werden Fahrzeugstatus, Zollunterlagen und operative Updates in einem abgestimmten Prozess verfolgt.",
       items: [
         {
           title: "Komplett- und Teilladung",
@@ -409,7 +409,7 @@ export const dictionaries = {
       eyebrow: "Angebot und Operation",
       title: "Senden Sie Route, Frachttyp und Lieferdatum; wir klaren den Transportplan.",
       text:
-        "Nach Eingang der Anfrage werden Route, Fahrzeugeignung, Dokumentenbedarf und Lieferfenster im selben Operationsfluss geklart.",
+        "Nach Eingang der Anfrage werden Route, Fahrzeugeignung, Dokumentenbedarf und Lieferfenster in der ersten operativen Prufung geklart.",
       fields: {
         name: "Name",
         company: "Firma",
@@ -422,7 +422,7 @@ export const dictionaries = {
       button: "Anfrage erstellen",
       success: "Anfrageentwurf vorbereitet. Sobald eine Empfangsadresse hinterlegt ist, lauft das Formular direkt in die Operation."
     },
-    footer: "Bordeaux-weißer internationaler Straßentransport."
+    footer: "Straßentransport mit Vorprufung von Dokumenten, Route und Frachteignung."
   },
   ro: {
     nav: {
@@ -435,7 +435,7 @@ export const dictionaries = {
       eyebrow: "Logistica rutiera la standard european",
       title: "GakkoTransport23",
       lead:
-        "Echipa practica pentru marfa comerciala cu verificare documente, date cursa, vama si conditii de acceptare pentru marfa speciala.",
+        "Serviciu logistic planificat pentru marfa comerciala, cu verificare documente, date cursa, vama si conditii de acceptare pentru marfa speciala.",
       primaryCta: "Cere oferta",
       secondaryCta: "Tipuri marfa"
     },
@@ -447,7 +447,7 @@ export const dictionaries = {
     signals: ["Operare C2", "Tronson K1", "Date U-ETDS", "Preverificare marfa speciala"],
     capabilities: {
       eyebrow: "Documente si conformitate",
-      title: "Viteza unei firme mici cu disciplina unui transport documentat.",
+      title: "Operatiuni flexibile cu disciplina unui transport documentat.",
       text:
         "Inainte de acceptare se verifica documentele, camionul, datele cursei, vama si clasa marfii.",
       cards: [
@@ -471,9 +471,9 @@ export const dictionaries = {
     },
     services: {
       eyebrow: "Structura operationala",
-      title: "Camion complet, marfa partiala si piese de proiect cu urmarire apropiata.",
+      title: "Camion complet, marfa partiala si piese de proiect cu urmarire operationala constanta.",
       text:
-        "Documentat ca un operator mare, rapid ca o firma mica: incarcare, camion, vama si confirmare livrare raman pe acelasi fir.",
+        "De la planul de incarcare pana la confirmarea livrarii, statusul camionului, actele vamale si actualizarile operationale sunt urmarite intr-un proces coordonat.",
       items: [
         {
           title: "Camion complet si partial",
@@ -503,7 +503,7 @@ export const dictionaries = {
       eyebrow: "Oferta si operatiuni",
       title: "Trimite ruta, tipul de marfa si data livrarii; clarificam planul de transport.",
       text:
-        "Dupa primirea cererii, ruta, disponibilitatea camionului, documentele si fereastra de livrare sunt clarificate in acelasi flux operational.",
+        "Dupa primirea cererii, ruta, disponibilitatea camionului, documentele si fereastra de livrare sunt verificate in primul control operational.",
       fields: {
         name: "Nume complet",
         company: "Companie",
