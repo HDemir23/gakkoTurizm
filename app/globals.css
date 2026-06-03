@@ -1,32 +1,31 @@
 :root {
-  --black: #000000;
-  --red: #ff0000;
+  --black: #171416;
   --gray: #dedede;
   --white: #ffffff;
-  --burgundy: var(--red);
-  --burgundy-deep: var(--black);
-  --burgundy-soft: #d00000;
-  --burgundy-veil: rgba(255, 0, 0, 0.12);
-  --paper: var(--gray);
-  --surface: #eeeeee;
-  --surface-warm: #e4e4e4;
-  --surface-muted: #cfcfcf;
-  --ink: var(--black);
-  --ink-soft: #171717;
-  --muted: #454545;
-  --muted-strong: #2e2e2e;
-  --line: #bdbdbd;
-  --line-strong: #9f9f9f;
-  --steel: #121212;
-  --steel-deep: var(--black);
-  --sage: #383838;
-  --gold: var(--red);
-  --gold-soft: #ff3b3b;
-  --focus-ring: rgba(255, 0, 0, 0.58);
-  --glass-light: rgba(255, 255, 255, 0.1);
-  --glass-strong: rgba(255, 255, 255, 0.16);
-  --shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
-  --shadow-soft: 0 18px 46px rgba(0, 0, 0, 0.16);
+  --burgundy: #7a1024;
+  --burgundy-deep: #340712;
+  --burgundy-soft: #a5364a;
+  --burgundy-veil: rgba(122, 16, 36, 0.12);
+  --paper: #fffaf6;
+  --surface: #ffffff;
+  --surface-warm: #fff3ef;
+  --surface-muted: #f7ebe7;
+  --ink: #171416;
+  --ink-soft: #342a2e;
+  --muted: #70656a;
+  --muted-strong: #51464b;
+  --line: #eaded9;
+  --line-strong: #dbcac2;
+  --steel: #253137;
+  --steel-deep: #24070e;
+  --sage: #65715f;
+  --gold: #bd8e50;
+  --gold-soft: #f0c78e;
+  --focus-ring: rgba(122, 16, 36, 0.48);
+  --glass-light: rgba(255, 255, 255, 0.12);
+  --glass-strong: rgba(255, 255, 255, 0.18);
+  --shadow: 0 22px 70px rgba(36, 14, 18, 0.22);
+  --shadow-soft: 0 18px 46px rgba(39, 18, 21, 0.08);
   --radius: 8px;
   --font-sans: Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Aptos Display", Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -153,8 +152,8 @@ main {
 .section-burgundy {
   color: var(--white);
   background:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.96), rgba(255, 0, 0, 0.74)),
-    var(--red);
+    linear-gradient(120deg, rgba(52, 7, 18, 0.99), rgba(122, 16, 36, 0.95)),
+    var(--burgundy);
 }
 
 .section-inner {

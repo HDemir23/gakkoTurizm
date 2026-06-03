@@ -8,9 +8,9 @@
   align-items: center;
   gap: 22px;
   padding: 0 var(--page-gutter);
-  border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--white);
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(52, 7, 18, 0.36);
   backdrop-filter: blur(18px);
   transition:
     background 180ms ease,
@@ -21,7 +21,7 @@
 
 .site-header.is-scrolled {
   color: var(--ink);
-  background: rgba(222, 222, 222, 0.94);
+  background: rgba(255, 250, 246, 0.94);
   border-color: var(--line);
   box-shadow: 0 12px 36px rgba(23, 20, 22, 0.08);
 }

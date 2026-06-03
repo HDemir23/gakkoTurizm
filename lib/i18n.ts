@@ -22,16 +22,16 @@ export const dictionaries = {
       eyebrow: "Belgeli uluslararasi kara yolu tasimaciligi",
       title: "GakkoTransport23",
       lead:
-        "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve patlayici haric genis yuk kabul kapasitesiyle Avrupa hattinda calisan pratik lojistik ekip.",
+        "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve ozel yuk uygunluk kontroluyle Avrupa hattinda calisan pratik lojistik ekip.",
       primaryCta: "Tasima teklifi al",
       secondaryCta: "Belge kapsami"
     },
     stats: [
       { value: "C2 / K1", label: "ticari yuk altyapisi" },
-      { value: "Patlayici haric", label: "genis tasima kapsami" },
+      { value: "Yuk uygunlugu", label: "belge ve rota on kontrolu" },
       { value: "TR / EU", label: "gumruk ve rota takibi" }
     ],
-    signals: ["C2 uyumlu operasyon", "K1 yurtiçi tasima", "U-ETDS bilgi hazirligi", "ADR on kontrol"],
+    signals: ["C2 uyumlu operasyon", "K1 yurtiçi tasima", "U-ETDS bilgi hazirligi", "Ozel yuk on kontrolu"],
     capabilities: {
       eyebrow: "Belge ve uygunluk",
       title: "Kucuk firma hizi, belgeli tasimaci disiplini.",
@@ -54,9 +54,9 @@ export const dictionaries = {
             "Gonderici, alici, plaka, surucu, yuk cinsi, agirlik ve yukleme-bosaltma bilgileri operasyon basinda netlestirilir."
         },
         {
-          title: "Patlayici haric kontrollu kabul",
+          title: "Kontrollu yuk kabul",
           text:
-            "ADR veya ek izin gerektiren yuklerde sinif, UN kodu, ambalaj ve arac uygunlugu patlayici madde haric onceden incelenir."
+            "ADR veya ek izin gerektiren yuklerde sinif, UN kodu, ambalaj ve arac uygunlugu sevkiyat oncesinde incelenir."
         }
       ]
     },
@@ -93,7 +93,7 @@ export const dictionaries = {
         },
         {
           title: "Yetki ve arac kontrolu",
-          text: "Belge kapsami, tasit uygunlugu, surucu bilgisi, rota ve yasakli/patlayici yuk riski kontrol edilir."
+          text: "Belge kapsami, tasit uygunlugu, surucu bilgisi, rota ve ozel yuk kabul kosullari kontrol edilir."
         },
         {
           title: "Yukleme ve sefer",
@@ -122,7 +122,7 @@ export const dictionaries = {
       button: "Tasima talebi olustur",
       success: "Talep taslagi hazirlandi. Yuk, belge ve rota bilgileri operasyon on kontrolune aktarilacak."
     },
-    footer: "Patlayici haric genis kapsamli, belgeli kara yolu tasimaciligi."
+    footer: "Belge, rota ve yuk uygunlugu on kontroluyle kara yolu tasimaciligi."
   },
   en: {
     nav: {
@@ -135,16 +135,16 @@ export const dictionaries = {
       eyebrow: "Document-led international road transport",
       title: "GakkoTransport23",
       lead:
-        "A practical logistics team for C2 / K1 aligned commercial cargo, U-ETDS-ready trip data, document follow-up and broad cargo acceptance except explosive goods.",
+        "A practical logistics team for C2 / K1 aligned commercial cargo, U-ETDS-ready trip data, document follow-up and special cargo fit checks.",
       primaryCta: "Get transport quote",
       secondaryCta: "Document scope"
     },
     stats: [
       { value: "C2 / K1", label: "commercial cargo base" },
-      { value: "No explosives", label: "broad cargo scope" },
+      { value: "Cargo fit", label: "document and route pre-check" },
       { value: "TR / EU", label: "customs and route follow-up" }
     ],
-    signals: ["C2-aligned operation", "K1 domestic leg", "U-ETDS data ready", "ADR pre-check"],
+    signals: ["C2-aligned operation", "K1 domestic leg", "U-ETDS data ready", "Special cargo pre-check"],
     capabilities: {
       eyebrow: "Documents and fit",
       title: "Small-company speed with documented carrier discipline.",
@@ -167,7 +167,7 @@ export const dictionaries = {
             "Sender, consignee, plate, driver, cargo type, weight and loading-unloading data are clarified at the start."
         },
         {
-          title: "Controlled acceptance, no explosives",
+          title: "Controlled cargo acceptance",
           text:
             "For ADR or permit-sensitive loads, class, UN code, packaging and vehicle fit are reviewed before pickup."
         }
@@ -206,7 +206,7 @@ export const dictionaries = {
         },
         {
           title: "Permit and vehicle check",
-          text: "Document scope, vehicle fit, driver data, route and explosive/prohibited cargo risk are reviewed."
+          text: "Document scope, vehicle fit, driver data, route and special cargo acceptance conditions are reviewed."
         },
         {
           title: "Loading and trip",
@@ -235,7 +235,7 @@ export const dictionaries = {
       button: "Create transport request",
       success: "Request draft prepared. Cargo, document and route details will move to operations pre-check."
     },
-    footer: "Documented road transport for broad cargo scope except explosives."
+    footer: "Road transport with document, route and cargo-fit pre-checks."
   },
   ru: {
     nav: {
@@ -248,16 +248,16 @@ export const dictionaries = {
       eyebrow: "Автологистика европейского стандарта",
       title: "GakkoTransport23",
       lead:
-        "Практичная команда для коммерческих грузов с проверкой разрешений, данных рейса, документов и широким приемом грузов кроме взрывчатых.",
+        "Практичная команда для коммерческих грузов с проверкой разрешений, данных рейса, документов и условий приема специальных грузов.",
       primaryCta: "Запросить расчет",
       secondaryCta: "Типы грузов"
     },
     stats: [
       { value: "C2 / K1", label: "коммерческая основа" },
-      { value: "Без взрывчатых", label: "широкий спектр грузов" },
+      { value: "Пригодность груза", label: "проверка документов и маршрута" },
       { value: "TR / EU", label: "таможня и маршрут" }
     ],
-    signals: ["Операция C2", "Внутренний K1", "Данные U-ETDS", "Предпроверка ADR"],
+    signals: ["Операция C2", "Внутренний K1", "Данные U-ETDS", "Проверка спецгруза"],
     capabilities: {
       eyebrow: "Документы и допуск",
       title: "Скорость небольшой фирмы с дисциплиной документированной перевозки.",
@@ -277,7 +277,7 @@ export const dictionaries = {
           text: "Отправитель, получатель, номер машины, водитель, тип груза, вес и точки загрузки уточняются заранее."
         },
         {
-          title: "Без взрывчатых",
+          title: "Контролируемый прием",
           text: "Для ADR или грузов с разрешениями заранее проверяются класс, UN-код, упаковка и пригодность машины."
         }
       ]
@@ -341,16 +341,16 @@ export const dictionaries = {
       eyebrow: "Straßenlogistik nach europäischem Standard",
       title: "GakkoTransport23",
       lead:
-        "Praktische Logistik fur gewerbliche Ladungen mit Dokumentenprufung, Fahrtdaten, Zollabgleich und breitem Frachtumfang außer Explosivgut.",
+        "Praktische Logistik fur gewerbliche Ladungen mit Dokumentenprufung, Fahrtdaten, Zollabgleich und Eignungsprufung fur Sonderfracht.",
       primaryCta: "Angebot anfragen",
       secondaryCta: "Frachtumfang"
     },
     stats: [
       { value: "C2 / K1", label: "gewerbliche Frachtbasis" },
-      { value: "Ohne Explosivgut", label: "breiter Frachtumfang" },
+      { value: "Fracht-Eignung", label: "Dokument- und Routenvorprufung" },
       { value: "TR / EU", label: "Zoll und Route" }
     ],
-    signals: ["C2-konforme Operation", "K1 Inlandsstrecke", "U-ETDS Daten", "ADR Vorprufung"],
+    signals: ["C2-konforme Operation", "K1 Inlandsstrecke", "U-ETDS Daten", "Sonderfracht-Vorprufung"],
     capabilities: {
       eyebrow: "Dokumente und Eignung",
       title: "Kleine-Firma-Tempo mit dokumentierter Transportdisziplin.",
@@ -371,7 +371,7 @@ export const dictionaries = {
         },
         {
           title: "Kontrollierte Annahme",
-          text: "ADR- oder genehmigungspflichtige Ladungen werden außer Explosivgut nach Klasse, UN-Code und Fahrzeug gepruft."
+          text: "ADR- oder genehmigungspflichtige Ladungen werden nach Klasse, UN-Code, Verpackung und Fahrzeug gepruft."
         }
       ]
     },
@@ -435,16 +435,16 @@ export const dictionaries = {
       eyebrow: "Logistica rutiera la standard european",
       title: "GakkoTransport23",
       lead:
-        "Echipa practica pentru marfa comerciala cu verificare documente, date cursa, vama si gama larga de acceptare fara explozivi.",
+        "Echipa practica pentru marfa comerciala cu verificare documente, date cursa, vama si conditii de acceptare pentru marfa speciala.",
       primaryCta: "Cere oferta",
       secondaryCta: "Tipuri marfa"
     },
     stats: [
       { value: "C2 / K1", label: "baza marfa comerciala" },
-      { value: "Fara explozivi", label: "gama larga de marfuri" },
+      { value: "Potrivire marfa", label: "preverificare acte si ruta" },
       { value: "TR / EU", label: "vama si ruta" }
     ],
-    signals: ["Operare C2", "Tronson K1", "Date U-ETDS", "Preverificare ADR"],
+    signals: ["Operare C2", "Tronson K1", "Date U-ETDS", "Preverificare marfa speciala"],
     capabilities: {
       eyebrow: "Documente si conformitate",
       title: "Viteza unei firme mici cu disciplina unui transport documentat.",
@@ -465,7 +465,7 @@ export const dictionaries = {
         },
         {
           title: "Acceptare controlata",
-          text: "Pentru ADR sau permise speciale, fara explozivi, se verifica clasa, codul UN, ambalajul si camionul."
+          text: "Pentru ADR sau permise speciale se verifica clasa, codul UN, ambalajul si camionul."
         }
       ]
     },
@@ -516,7 +516,7 @@ export const dictionaries = {
       button: "Creeaza cerere",
       success: "Sablonul cererii este pregatit. Dupa adaugarea unei adrese de primire, formularul va merge direct catre operatiuni."
     },
-    footer: "Transport rutier documentat, fara explozivi, pe gama larga de marfuri."
+    footer: "Transport rutier cu preverificare de documente, ruta si potrivire marfa."
   }
 } as const;
 

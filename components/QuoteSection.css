@@ -2,8 +2,8 @@
   padding-bottom: 0;
   color: var(--white);
   background:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.99), rgba(100, 0, 0, 0.9)),
-    var(--black);
+    linear-gradient(120deg, rgba(37, 49, 55, 0.98), rgba(52, 7, 18, 0.94)),
+    var(--steel);
 }
 
 .quote-layout {
