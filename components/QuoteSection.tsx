@@ -5,6 +5,9 @@ import { useLanguage } from "@/components/LanguageProvider";
 import {
   BRAND_CONTACT_EMAIL,
   BRAND_CONTACT_PERSON,
+  BRAND_CONTACT_PHONE_DISPLAY,
+  BRAND_CONTACT_PHONE_HREF,
+  BRAND_CONTACT_WHATSAPP_HREF,
   BRAND_FULL_NAME,
   BRAND_WEBSITE_SOURCE,
 } from "@/lib/brand";
@@ -14,13 +17,13 @@ import { FormEvent, useCallback, useMemo, useState } from "react";
 const formspreeEndpoint = "https://formspree.io/f/xgobvwza";
 
 const contactInfo = {
-  phoneDisplay: "+90 505 031 43 523",
-  phoneHref: "tel:+9050503143523",
+  phoneDisplay: BRAND_CONTACT_PHONE_DISPLAY,
+  phoneHref: BRAND_CONTACT_PHONE_HREF,
   email: BRAND_CONTACT_EMAIL,
   mapHref:
     "https://www.google.com/maps/search/?api=1&query=Tekirda%C4%9F%20T%C3%BCrkiye",
   addressDisplay: "Tekirdağ / Türkiye",
-  whatsappHref: "https://wa.me/9050503143523",
+  whatsappHref: BRAND_CONTACT_WHATSAPP_HREF,
 };
 
 export function QuoteSection() {
