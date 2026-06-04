@@ -21,7 +21,7 @@ export function Capabilities() {
   );
 
   return (
-    <section className="section section-light" id="capabilities">
+    <section className="section section-light capabilities-section" id="capabilities">
       <div className="section-inner">
         <div className="section-heading" data-reveal>
           <p className="eyebrow">{dictionary.capabilities.eyebrow}</p>

@@ -23,3 +23,24 @@ Dev server acildiginda sayfa `http://localhost:3000` adresinde calisir.
 ## Hero Gorseli
 
 Hero kamyon gorseli `public/hero-iveco-truck.png` dosyasindadir. Kendi tır fotografini koymak icin ayni dosyayi degistirmen yeterli.
+
+
+
+
+yunanca
+yunanistan turkiye hatti
+balkanlar ve avrupa hatti
+tr arnavutluk ,makedonya, sirbistan, kosova, karadag ,bosna hersek balkanlar ve avrupa hatti
+rotalar ekle
+
+
+gorsel galerisi
+
+bordo beyaz
+
+tarih saat (yunan ,tr, arnavutluk, sirbistan)
+
+ikinci dil yunanca
+
+adres tekirdag
+
