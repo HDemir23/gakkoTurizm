@@ -18,6 +18,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Belgeler",
       services: "Taşıma",
+      routes: "Rotalar",
       process: "Operasyon",
       contact: "İletişim"
     },
@@ -86,6 +87,45 @@ export const dictionaries = {
         }
       ]
     },
+    routes: {
+      eyebrow: "Rotalar",
+      title: "Türkiye-Yunanistan hattı öncelikli, Balkanlar ve Avrupa devam bağlantılarıyla.",
+      text:
+        "En sık çalışılan güzergâh Türkiye ↔ Yunanistan hattı. Tekirdağ çıkışlı operasyonlarda Balkan ülkeleri ve Avrupa yönleri için yük, sınır ve teslim planı birlikte netleştirilir.",
+      primary: {
+        badge: "En sık rota",
+        title: "Türkiye ↔ Yunanistan",
+        text:
+          "Yunanistan-Türkiye hattında düzenli gidiş-dönüş takip; çıkış, sınır geçişi, gümrük evrakı ve teslim penceresi tek akışta yönetilir.",
+        stats: ["TR çıkış", "GR varış", "Dönüş hattı"]
+      },
+      lanes: [
+        {
+          title: "Yunanistan - Türkiye hattı",
+          text:
+            "Yunanistan çıkışlı Türkiye dönüşlerinde alıcı, gümrük ve boşaltma planı operasyon başlamadan netleştirilir.",
+          points: ["Yunanistan", "Türkiye"]
+        },
+        {
+          title: "Balkanlar ve Avrupa hattı",
+          text:
+            "Balkan geçişleri üzerinden Avrupa teslimleri için rota, evrak ve sınır süreci takip edilir.",
+          points: ["Balkanlar", "Avrupa"]
+        },
+        {
+          title: "TR - Arnavutluk / Makedonya",
+          text:
+            "Türkiye çıkışlı Arnavutluk ve Makedonya yönlerinde parsiyel veya komple yük planı yapılır.",
+          points: ["Türkiye", "Arnavutluk", "Makedonya"]
+        },
+        {
+          title: "TR - Sırbistan / Kosova / Karadağ / Bosna Hersek",
+          text:
+            "Sırbistan, Kosova, Karadağ ve Bosna Hersek hatlarında yükleme ve teslim zamanları sınır geçişleriyle birlikte takip edilir.",
+          points: ["Türkiye", "Sırbistan", "Kosova", "Karadağ", "Bosna Hersek"]
+        }
+      ]
+    },
     process: {
       eyebrow: "Operasyon akışı",
       title: "Önce uygunluk, sonra net fiyat ve sevkiyat.",
@@ -150,6 +190,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Έγγραφα",
       services: "Μεταφορές",
+      routes: "Διαδρομές",
       process: "Λειτουργία",
       contact: "Επικοινωνία"
     },
@@ -220,6 +261,45 @@ export const dictionaries = {
           title: "Πολύγλωσση λειτουργική επικοινωνία",
           text:
             "Η επικοινωνία στα Τουρκικά και στα Ελληνικά μειώνει την απώλεια πληροφορίας μεταξύ οδηγού, αποστολέα και παραλήπτη."
+        }
+      ]
+    },
+    routes: {
+      eyebrow: "Διαδρομές",
+      title: "Προτεραιότητα στη γραμμή Τουρκία-Ελλάδα, με συνέχεια προς Βαλκάνια και Ευρώπη.",
+      text:
+        "Η πιο συχνή διαδρομή είναι Τουρκία ↔ Ελλάδα. Για αναχωρήσεις από Τεκιρντάγ οργανώνονται μαζί το φορτίο, τα σύνορα και το πλάνο παράδοσης προς Βαλκάνια και Ευρώπη.",
+      primary: {
+        badge: "Πιο συχνή διαδρομή",
+        title: "Τουρκία ↔ Ελλάδα",
+        text:
+          "Στη γραμμή Ελλάδα-Τουρκία παρακολουθείται τακτικά η μετάβαση και η επιστροφή· αναχώρηση, διέλευση συνόρων, τελωνειακά έγγραφα και παράθυρο παράδοσης διαχειρίζονται σε μία ροή.",
+        stats: ["Αναχώρηση TR", "Άφιξη GR", "Γραμμή επιστροφής"]
+      },
+      lanes: [
+        {
+          title: "Γραμμή Ελλάδα - Τουρκία",
+          text:
+            "Στις επιστροφές από Ελλάδα προς Τουρκία, ο παραλήπτης, τα τελωνεία και το πλάνο εκφόρτωσης διευκρινίζονται πριν από την έναρξη της λειτουργίας.",
+          points: ["Ελλάδα", "Τουρκία"]
+        },
+        {
+          title: "Γραμμή Βαλκανίων και Ευρώπης",
+          text:
+            "Για παραδόσεις στην Ευρώπη μέσω βαλκανικών διελεύσεων παρακολουθούνται η διαδρομή, τα έγγραφα και η διαδικασία συνόρων.",
+          points: ["Βαλκάνια", "Ευρώπη"]
+        },
+        {
+          title: "TR - Αλβανία / Μακεδονία",
+          text:
+            "Για κατευθύνσεις από την Τουρκία προς Αλβανία και Μακεδονία σχεδιάζεται μερικό ή πλήρες φορτίο.",
+          points: ["Τουρκία", "Αλβανία", "Μακεδονία"]
+        },
+        {
+          title: "TR - Σερβία / Κόσοβο / Μαυροβούνιο / Βοσνία-Ερζεγοβίνη",
+          text:
+            "Στις γραμμές Σερβίας, Κοσόβου, Μαυροβουνίου και Βοσνίας-Ερζεγοβίνης, οι χρόνοι φόρτωσης και παράδοσης παρακολουθούνται μαζί με τις διελεύσεις συνόρων.",
+          points: ["Τουρκία", "Σερβία", "Κόσοβο", "Μαυροβούνιο", "Βοσνία-Ερζεγοβίνη"]
         }
       ]
     },
@@ -295,6 +375,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Documents",
       services: "Transport",
+      routes: "Routes",
       process: "Operations",
       contact: "Contact"
     },
@@ -363,6 +444,45 @@ export const dictionaries = {
         }
       ]
     },
+    routes: {
+      eyebrow: "Routes",
+      title: "Turkey-Greece first, with onward Balkan and Europe lanes.",
+      text:
+        "The most frequent lane is Turkey ↔ Greece. For Tekirdağ-based operations, cargo, border and delivery plans are clarified together for Balkan countries and European destinations.",
+      primary: {
+        badge: "Most frequent route",
+        title: "Turkey ↔ Greece",
+        text:
+          "Regular outbound and return follow-up on the Greece-Turkey lane; departure, border crossing, customs paperwork and delivery window are managed in one flow.",
+        stats: ["TR departure", "GR arrival", "Return lane"]
+      },
+      lanes: [
+        {
+          title: "Greece - Turkey lane",
+          text:
+            "For Greece-origin returns to Turkey, consignee, customs and unloading plans are clarified before operations start.",
+          points: ["Greece", "Turkey"]
+        },
+        {
+          title: "Balkans and Europe lane",
+          text:
+            "Route, paperwork and border progress are tracked for European deliveries through Balkan crossings.",
+          points: ["Balkans", "Europe"]
+        },
+        {
+          title: "TR - Albania / Macedonia",
+          text:
+            "Partial or full-truckload plans are arranged from Turkey toward Albania and Macedonia.",
+          points: ["Turkey", "Albania", "Macedonia"]
+        },
+        {
+          title: "TR - Serbia / Kosovo / Montenegro / Bosnia and Herzegovina",
+          text:
+            "Loading and delivery timings are followed alongside border crossings for Serbia, Kosovo, Montenegro and Bosnia and Herzegovina lanes.",
+          points: ["Turkey", "Serbia", "Kosovo", "Montenegro", "Bosnia and Herzegovina"]
+        }
+      ]
+    },
     process: {
       eyebrow: "Operations flow",
       title: "Fit check first, then clear price and dispatch.",
@@ -427,6 +547,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Допуски",
       services: "Услуги",
+      routes: "Маршруты",
       process: "Процесс",
       contact: "Контакт"
     },
@@ -487,6 +608,45 @@ export const dictionaries = {
         }
       ]
     },
+    routes: {
+      eyebrow: "Маршруты",
+      title: "Приоритетная линия Турция-Греция с продолжением на Балканы и Европу.",
+      text:
+        "Самый частый маршрут - Турция ↔ Греция. Для операций из Текирдага груз, граница и план доставки заранее согласуются для балканских стран и европейских направлений.",
+      primary: {
+        badge: "Самый частый маршрут",
+        title: "Турция ↔ Греция",
+        text:
+          "На линии Греция-Турция регулярно отслеживаются рейс и обратная загрузка; выезд, граница, таможенные документы и окно доставки ведутся в одном процессе.",
+        stats: ["Выезд TR", "Прибытие GR", "Обратная линия"]
+      },
+      lanes: [
+        {
+          title: "Линия Греция - Турция",
+          text:
+            "Для обратных рейсов из Греции в Турцию получатель, таможня и разгрузка уточняются до начала операции.",
+          points: ["Греция", "Турция"]
+        },
+        {
+          title: "Балканы и Европа",
+          text:
+            "Для европейских доставок через Балканы отслеживаются маршрут, документы и прохождение границ.",
+          points: ["Балканы", "Европа"]
+        },
+        {
+          title: "TR - Албания / Македония",
+          text:
+            "Для направлений из Турции в Албанию и Македонию планируется частичная или полная загрузка.",
+          points: ["Турция", "Албания", "Македония"]
+        },
+        {
+          title: "TR - Сербия / Косово / Черногория / Босния и Герцеговина",
+          text:
+            "На линиях Сербии, Косово, Черногории и Боснии и Герцеговины время загрузки и доставки отслеживается вместе с границами.",
+          points: ["Турция", "Сербия", "Косово", "Черногория", "Босния и Герцеговина"]
+        }
+      ]
+    },
     process: {
       eyebrow: "Рабочий процесс",
       title: "Сначала проверка допуска, затем цена и отправка.",
@@ -539,6 +699,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Umfang",
       services: "Leistungen",
+      routes: "Routen",
       process: "Ablauf",
       contact: "Kontakt"
     },
@@ -600,6 +761,45 @@ export const dictionaries = {
         }
       ]
     },
+    routes: {
+      eyebrow: "Routen",
+      title: "Turkei-Griechenland zuerst, mit Anschluss an Balkan- und Europa-Linien.",
+      text:
+        "Die haufigste Linie ist Turkei ↔ Griechenland. Fur Operationen ab Tekirdağ werden Fracht, Grenze und Lieferplan fur Balkanlander und europaische Ziele gemeinsam geklart.",
+      primary: {
+        badge: "Haufigste Route",
+        title: "Turkei ↔ Griechenland",
+        text:
+          "Auf der Griechenland-Turkei-Linie werden Hin- und Rucklauf regelmaßig verfolgt; Abfahrt, Grenzubergang, Zollunterlagen und Lieferfenster laufen in einem Prozess.",
+        stats: ["TR Abfahrt", "GR Ankunft", "Rucklinie"]
+      },
+      lanes: [
+        {
+          title: "Griechenland - Turkei Linie",
+          text:
+            "Bei Ruckfahrten aus Griechenland in die Turkei werden Empfanger, Zoll und Entladeplan vor Operationsstart geklart.",
+          points: ["Griechenland", "Turkei"]
+        },
+        {
+          title: "Balkan- und Europa-Linie",
+          text:
+            "Fur Lieferungen nach Europa uber Balkanubergange werden Route, Unterlagen und Grenzstatus verfolgt.",
+          points: ["Balkan", "Europa"]
+        },
+        {
+          title: "TR - Albanien / Mazedonien",
+          text:
+            "Von der Turkei Richtung Albanien und Mazedonien werden Teil- oder Komplettladungen geplant.",
+          points: ["Turkei", "Albanien", "Mazedonien"]
+        },
+        {
+          title: "TR - Serbien / Kosovo / Montenegro / Bosnien-Herzegowina",
+          text:
+            "Auf den Linien Serbien, Kosovo, Montenegro und Bosnien-Herzegowina werden Lade- und Lieferzeiten zusammen mit Grenzubergangen verfolgt.",
+          points: ["Turkei", "Serbien", "Kosovo", "Montenegro", "Bosnien-Herzegowina"]
+        }
+      ]
+    },
     process: {
       eyebrow: "Workflow",
       title: "Erst Eignungsprufung, dann Preis und Disposition.",
@@ -652,6 +852,7 @@ export const dictionaries = {
     nav: {
       capabilities: "Autorizari",
       services: "Servicii",
+      routes: "Rute",
       process: "Proces",
       contact: "Contact"
     },
@@ -710,6 +911,45 @@ export const dictionaries = {
         {
           title: "Vama, ruta si frontiera",
           text: "Actele de export, datele destinatarului, fereastra de livrare si statusul frontierei sunt comunicate clar."
+        }
+      ]
+    },
+    routes: {
+      eyebrow: "Rute",
+      title: "Linia Turcia-Grecia are prioritate, cu legaturi spre Balcani si Europa.",
+      text:
+        "Cea mai frecventa ruta este Turcia ↔ Grecia. Pentru operatiuni din Tekirdağ, marfa, frontiera si planul de livrare sunt clarificate impreuna pentru tarile balcanice si destinatiile europene.",
+      primary: {
+        badge: "Cea mai frecventa ruta",
+        title: "Turcia ↔ Grecia",
+        text:
+          "Pe linia Grecia-Turcia se urmareste constant tur-retur; plecarea, trecerea frontierei, actele vamale si fereastra de livrare sunt gestionate intr-un singur flux.",
+        stats: ["Plecare TR", "Sosire GR", "Linie retur"]
+      },
+      lanes: [
+        {
+          title: "Linia Grecia - Turcia",
+          text:
+            "Pentru retururile din Grecia catre Turcia, destinatarul, vama si planul de descarcare se clarifica inainte de inceperea operatiunii.",
+          points: ["Grecia", "Turcia"]
+        },
+        {
+          title: "Linia Balcani si Europa",
+          text:
+            "Pentru livrari europene prin treceri balcanice se urmaresc ruta, actele si procesul de frontiera.",
+          points: ["Balcani", "Europa"]
+        },
+        {
+          title: "TR - Albania / Macedonia",
+          text:
+            "Din Turcia catre Albania si Macedonia se planifica transport partial sau camion complet.",
+          points: ["Turcia", "Albania", "Macedonia"]
+        },
+        {
+          title: "TR - Serbia / Kosovo / Muntenegru / Bosnia si Hertegovina",
+          text:
+            "Pe liniile Serbia, Kosovo, Muntenegru si Bosnia si Hertegovina, incarcarea si livrarea sunt urmarite impreuna cu trecerile de frontiera.",
+          points: ["Turcia", "Serbia", "Kosovo", "Muntenegru", "Bosnia si Hertegovina"]
         }
       ]
     },

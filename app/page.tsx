@@ -7,6 +7,7 @@ import { HeroMedia } from "@/components/HeroMedia";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Process } from "@/components/Process";
 import { QuoteSection } from "@/components/QuoteSection";
+import { Routes } from "@/components/Routes";
 import { Services } from "@/components/Services";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <Capabilities />
         <Services />
+        <Routes />
         <Process />
         <QuoteSection />
       </main>

@@ -15,6 +15,7 @@ import {
 const navItems = [
   { href: "#capabilities", key: "capabilities" },
   { href: "#services", key: "services" },
+  { href: "#routes", key: "routes" },
   { href: "#process", key: "process" },
   { href: "#contact", key: "contact" },
 ] as const;
