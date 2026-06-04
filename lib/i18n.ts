@@ -1,3 +1,5 @@
+import { BRAND_FULL_NAME, BRAND_SHORT_NAME } from "@/lib/brand";
+
 export const languages = {
   tr: { code: "TR", label: "Turkce", flag: "🇹🇷" },
   en: { code: "EN", label: "English", flag: "🇬🇧" },
@@ -20,7 +22,7 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Belgeli uluslararasi kara yolu tasimaciligi",
-      title: "GakkoTransport23",
+      title: BRAND_SHORT_NAME,
       lead:
         "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve ozel yuk uygunluk kontroluyle Avrupa hattinda planli lojistik hizmeti.",
       primaryCta: "Tasima teklifi al",
@@ -128,7 +130,7 @@ export const dictionaries = {
       eyebrow: "Direkt iletisim",
       title: "Teklif, evrak veya rota icin dogru kanali secin.",
       text: "Telefonla hizli gorusun, e-posta ile yuk detaylarini gonderin veya konumu haritada acin.",
-      mailSubject: "GakkoTransport23 tasima talebi",
+      mailSubject: `${BRAND_FULL_NAME} tasima talebi`,
       channels: {
         phone: { label: "Telefon", action: "Ara" },
         email: { label: "E-posta", action: "Mail ac" },
@@ -152,7 +154,7 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Document-led international road transport",
-      title: "GakkoTransport23",
+      title: BRAND_SHORT_NAME,
       lead:
         "Planned logistics service for C2 / K1 aligned commercial cargo, U-ETDS-ready trip data, document follow-up and special cargo fit checks.",
       primaryCta: "Get transport quote",
@@ -260,7 +262,7 @@ export const dictionaries = {
       eyebrow: "Direct contact",
       title: "Choose the right channel for quotes, documents or routes.",
       text: "Call for quick coordination, send cargo details by email or open the address in maps.",
-      mailSubject: "GakkoTransport23 transport request",
+      mailSubject: `${BRAND_FULL_NAME} transport request`,
       channels: {
         phone: { label: "Phone", action: "Call" },
         email: { label: "Email", action: "Open mail" },
@@ -284,7 +286,7 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Автологистика европейского стандарта",
-      title: "GakkoTransport23",
+      title: BRAND_SHORT_NAME,
       lead:
         "Логистическое сопровождение коммерческих грузов с проверкой разрешений, данных рейса, документов и условий приема специальных грузов.",
       primaryCta: "Запросить расчет",
@@ -372,7 +374,7 @@ export const dictionaries = {
       eyebrow: "Прямой контакт",
       title: "Выберите канал для расчета, документов или маршрута.",
       text: "Позвоните для быстрой координации, отправьте данные груза по email или откройте адрес на карте.",
-      mailSubject: "Заявка на перевозку GakkoTransport23",
+      mailSubject: `Заявка на перевозку ${BRAND_FULL_NAME}`,
       channels: {
         phone: { label: "Телефон", action: "Позвонить" },
         email: { label: "Email", action: "Открыть почту" },
@@ -396,7 +398,7 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Straßenlogistik nach europäischem Standard",
-      title: "GakkoTransport23",
+      title: BRAND_SHORT_NAME,
       lead:
         "Geplante Logistik fur gewerbliche Ladungen mit Dokumentenprufung, Fahrtdaten, Zollabgleich und Eignungsprufung fur Sonderfracht.",
       primaryCta: "Angebot anfragen",
@@ -485,7 +487,7 @@ export const dictionaries = {
       eyebrow: "Direkter Kontakt",
       title: "Wahlen Sie den passenden Kanal fur Angebot, Dokumente oder Route.",
       text: "Rufen Sie fur schnelle Abstimmung an, senden Sie Frachtdaten per E-Mail oder offnen Sie die Adresse in Maps.",
-      mailSubject: "GakkoTransport23 Transportanfrage",
+      mailSubject: `${BRAND_FULL_NAME} Transportanfrage`,
       channels: {
         phone: { label: "Telefon", action: "Anrufen" },
         email: { label: "E-Mail", action: "Mail offnen" },
@@ -509,7 +511,7 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Logistica rutiera la standard european",
-      title: "GakkoTransport23",
+      title: BRAND_SHORT_NAME,
       lead:
         "Serviciu logistic planificat pentru marfa comerciala, cu verificare documente, date cursa, vama si conditii de acceptare pentru marfa speciala.",
       primaryCta: "Cere oferta",
@@ -598,7 +600,7 @@ export const dictionaries = {
       eyebrow: "Contact direct",
       title: "Alege canalul potrivit pentru oferta, documente sau ruta.",
       text: "Suna pentru coordonare rapida, trimite detaliile marfii pe email sau deschide adresa in harta.",
-      mailSubject: "Cerere transport GakkoTransport23",
+      mailSubject: `Cerere transport ${BRAND_FULL_NAME}`,
       channels: {
         phone: { label: "Telefon", action: "Suna" },
         email: { label: "Email", action: "Deschide mail" },

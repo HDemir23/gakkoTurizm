@@ -41,6 +41,7 @@
 }
 
 .brand-mark {
+  position: relative;
   display: inline-grid;
   place-items: center;
   width: 46px;
@@ -53,10 +54,32 @@
     linear-gradient(135deg, var(--burgundy), var(--burgundy-deep)),
     var(--burgundy);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.brand-mark::after {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  box-shadow: 0 0 18px rgba(240, 199, 142, 0.76);
+  content: "";
+}
+
+.brand-mark svg {
+  position: relative;
+  z-index: 1;
 }
 
 .site-header.is-scrolled .brand-mark {
   border-color: rgba(122, 16, 36, 0.18);
+}
+
+.site-header.is-scrolled .brand-wordmark-go {
+  color: var(--burgundy);
 }
 
 .brand-copy {
@@ -69,7 +92,7 @@
   min-width: 0;
   overflow: hidden;
   color: inherit;
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   font-weight: 950;
   line-height: 1.05;
   text-overflow: ellipsis;

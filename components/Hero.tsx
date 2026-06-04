@@ -1,6 +1,8 @@
 "use client";
 
+import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
+import { BRAND_SHORT_NAME } from "@/lib/brand";
 import { ArrowDown, ArrowUpRight, Languages, Route, ShieldCheck } from "lucide-react";
 import { useMemo } from "react";
 
@@ -24,7 +26,13 @@ export function Hero() {
       <div className="hero-inner">
         <div className="hero-copy" data-reveal>
           <p className="eyebrow">{dictionary.hero.eyebrow}</p>
-          <h1 id="hero-title">{dictionary.hero.title}</h1>
+          <h1 id="hero-title">
+            {dictionary.hero.title === BRAND_SHORT_NAME ? (
+              <BrandWordmark className="hero-title-wordmark" />
+            ) : (
+              dictionary.hero.title
+            )}
+          </h1>
           <p className="hero-lead">{dictionary.hero.lead}</p>
 
           <div className="hero-actions">

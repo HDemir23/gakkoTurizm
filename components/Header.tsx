@@ -1,6 +1,8 @@
 "use client";
 
+import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
+import { BRAND_FULL_NAME, BRAND_SHORT_NAME } from "@/lib/brand";
 import { languages, type LanguageCode } from "@/lib/i18n";
 import { ChevronDown, Menu, Truck, X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState, type MouseEvent } from "react";
@@ -70,13 +72,15 @@ export function Header() {
   return (
     <header className={headerClassName}>
       <div className="header-shell">
-        <a className="brand" href="#top" aria-label="GakkoTransport23 home">
+        <a className="brand" href="#top" aria-label={`${BRAND_SHORT_NAME} home`}>
           <span className="brand-mark" aria-hidden="true">
             <Truck size={20} />
           </span>
           <span className="brand-copy">
-            <span className="brand-name">GakkoTransport23</span>
-            <span className="brand-tagline">International road transport</span>
+            <span className="brand-name">
+              <BrandWordmark />
+            </span>
+            <span className="brand-tagline">{BRAND_FULL_NAME}</span>
           </span>
         </a>
 

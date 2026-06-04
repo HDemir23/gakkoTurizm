@@ -1,6 +1,6 @@
-# GakkoTransport23
+# Gakgo Transport
 
-Next.js + React ile hazirlanmis tek sayfalik parallax lojistik landing sayfasi.
+GakGo markasi icin Next.js + React ile hazirlanmis tek sayfalik parallax lojistik landing sayfasi.
 
 ## Komutlar
 

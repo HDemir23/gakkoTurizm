@@ -86,6 +86,17 @@ h3 {
   font-weight: 900;
 }
 
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  color: inherit;
+  letter-spacing: 0;
+}
+
+.brand-wordmark-go {
+  color: var(--gold-soft);
+}
+
 main {
   position: relative;
   z-index: 2;

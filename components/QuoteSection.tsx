@@ -1,6 +1,8 @@
 "use client";
 
+import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
+import { BRAND_CONTACT_EMAIL, BRAND_WEBSITE_SOURCE } from "@/lib/brand";
 import { Send } from "lucide-react";
 import { FormEvent, useCallback, useMemo, useState } from "react";
 
@@ -9,7 +11,7 @@ const formspreeEndpoint = "https://formspree.io/f/mgobevyz";
 const contactInfo = {
   phoneDisplay: "+90 555 023 00 23",
   phoneHref: "tel:+905550230023",
-  email: "info@gakkotransport23.com",
+  email: BRAND_CONTACT_EMAIL,
   mapHref: "https://www.google.com/maps/search/?api=1&query=Elazig%20Turkiye",
   addressDisplay: "Elazig / Turkiye",
   whatsappHref: "https://wa.me/905550230023"
@@ -56,7 +58,7 @@ export function QuoteSection() {
       const formData = new FormData(form);
 
       formData.append("subject", dictionary.contact.mailSubject);
-      formData.append("source", "GakkoTransport23 website");
+      formData.append("source", BRAND_WEBSITE_SOURCE);
 
       setIsSubmitting(true);
       setStatusTone("idle");
@@ -138,7 +140,7 @@ export function QuoteSection() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-copy">
-            <span>GakkoTransport23</span>
+            <BrandWordmark className="footer-wordmark" />
             <span>{dictionary.footer}</span>
           </div>
           <nav className="footer-contact-list" aria-label="Contact shortcuts">

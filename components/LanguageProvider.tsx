@@ -24,21 +24,26 @@ type LanguageContextValue = {
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
+const LANGUAGE_STORAGE_KEY = "gakgo-language";
+const LEGACY_LANGUAGE_STORAGE_KEY = "gakko-language";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<LanguageCode>(defaultLanguage);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("gakko-language");
+    const stored =
+      window.localStorage.getItem(LANGUAGE_STORAGE_KEY) ??
+      window.localStorage.getItem(LEGACY_LANGUAGE_STORAGE_KEY);
     if (stored && isLanguageCode(stored)) {
       setLanguageState(stored);
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, stored);
       document.documentElement.lang = stored;
     }
   }, []);
 
   const setLanguage = useCallback((nextLanguage: LanguageCode) => {
     setLanguageState(nextLanguage);
-    window.localStorage.setItem("gakko-language", nextLanguage);
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
     document.documentElement.lang = nextLanguage;
   }, []);
 

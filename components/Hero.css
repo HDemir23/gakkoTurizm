@@ -38,10 +38,18 @@
 .hero h1 {
   margin: 0;
   max-width: none;
-  font-size: 4.85rem;
+  font-size: 6.2rem;
   line-height: 0.96;
   letter-spacing: 0;
   white-space: nowrap;
+}
+
+.hero-title-wordmark {
+  text-shadow: 0 22px 72px rgba(20, 9, 13, 0.34);
+}
+
+.hero-title-wordmark .brand-wordmark-go {
+  color: var(--gold-soft);
 }
 
 .hero-lead {
@@ -124,7 +132,7 @@
   }
 
   .hero h1 {
-    font-size: 4.4rem;
+    font-size: 5.35rem;
   }
 
   .hero-stats {
@@ -142,7 +150,7 @@
   }
 
   .hero h1 {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
   }
 
   .hero-lead {
@@ -164,7 +172,7 @@
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2.28rem;
+    font-size: 3.28rem;
   }
 
   .hero-actions,
@@ -188,7 +196,7 @@
   }
 
   .hero h1 {
-    font-size: 1.92rem;
+    font-size: 2.88rem;
   }
 
   .signal-strip {
