@@ -21,6 +21,10 @@
   color: var(--muted-strong);
 }
 
+.capabilities-mobile-scene {
+  display: none;
+}
+
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -82,7 +86,19 @@
 
 @media (max-width: 820px) {
   .capabilities-section {
-    background-size: 1120px auto;
+    background: var(--paper);
+  }
+
+  .capabilities-section .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .capabilities-mobile-scene {
+    display: block;
+    width: min(100%, 640px);
+    aspect-ratio: 3446 / 1216;
+    margin: 0 auto 30px;
+    background: url("/manzara.png") center / contain no-repeat;
   }
 
   .capability-grid {
@@ -91,6 +107,10 @@
 }
 
 @media (max-width: 480px) {
+  .capabilities-mobile-scene {
+    margin-bottom: 24px;
+  }
+
   .capability-card {
     min-height: auto;
   }

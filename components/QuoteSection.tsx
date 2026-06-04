@@ -2,7 +2,12 @@
 
 import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
-import { BRAND_CONTACT_EMAIL, BRAND_CONTACT_PERSON, BRAND_FULL_NAME, BRAND_WEBSITE_SOURCE } from "@/lib/brand";
+import {
+  BRAND_CONTACT_EMAIL,
+  BRAND_CONTACT_PERSON,
+  BRAND_FULL_NAME,
+  BRAND_WEBSITE_SOURCE,
+} from "@/lib/brand";
 import { Send } from "lucide-react";
 import { FormEvent, useCallback, useMemo, useState } from "react";
 
@@ -13,14 +18,16 @@ const contactInfo = {
   phoneHref: "tel:+9050503143523",
   email: BRAND_CONTACT_EMAIL,
   mapHref: "https://www.google.com/maps/search/?api=1&query=Elazig%20Turkiye",
-  addressDisplay: "Elazig / Turkiye",
-  whatsappHref: "https://wa.me/9050503143523"
+  addressDisplay: "Tekirdag / Turkiye",
+  whatsappHref: "https://wa.me/9050503143523",
 };
 
 export function QuoteSection() {
   const { dictionary } = useLanguage();
   const [status, setStatus] = useState("");
-  const [statusTone, setStatusTone] = useState<"idle" | "success" | "error">("idle");
+  const [statusTone, setStatusTone] = useState<"idle" | "success" | "error">(
+    "idle",
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const footerContacts = useMemo(
@@ -28,27 +35,27 @@ export function QuoteSection() {
       {
         href: contactInfo.phoneHref,
         label: dictionary.contact.channels.phone.label,
-        value: contactInfo.phoneDisplay
+        value: contactInfo.phoneDisplay,
       },
       {
         href: `mailto:${contactInfo.email}`,
         label: dictionary.contact.channels.email.label,
-        value: contactInfo.email
+        value: contactInfo.email,
       },
       {
         href: contactInfo.whatsappHref,
         label: dictionary.contact.channels.whatsapp.label,
         value: "WhatsApp",
-        external: true
+        external: true,
       },
       {
         href: contactInfo.mapHref,
         label: dictionary.contact.channels.address.label,
         value: contactInfo.addressDisplay,
-        external: true
-      }
+        external: true,
+      },
     ],
-    [dictionary.contact.channels]
+    [dictionary.contact.channels],
   );
 
   const onSubmit = useCallback(
@@ -69,8 +76,8 @@ export function QuoteSection() {
           method: "POST",
           body: formData,
           headers: {
-            Accept: "application/json"
-          }
+            Accept: "application/json",
+          },
         });
 
         if (!response.ok) {
@@ -91,8 +98,8 @@ export function QuoteSection() {
       dictionary.contact.mailSubject,
       dictionary.quote.error,
       dictionary.quote.success,
-      dictionary.quote.submitting
-    ]
+      dictionary.quote.submitting,
+    ],
   );
 
   return (
@@ -120,17 +127,36 @@ export function QuoteSection() {
             </label>
             <label>
               <span>{dictionary.quote.fields.route}</span>
-              <input name="route" type="text" placeholder={dictionary.quote.fields.routePlaceholder} />
+              <input
+                name="route"
+                type="text"
+                placeholder={dictionary.quote.fields.routePlaceholder}
+              />
             </label>
             <label className="wide">
               <span>{dictionary.quote.fields.cargo}</span>
-              <textarea name="cargo" rows={4} placeholder={dictionary.quote.fields.cargoPlaceholder} />
+              <textarea
+                name="cargo"
+                rows={4}
+                placeholder={dictionary.quote.fields.cargoPlaceholder}
+              />
             </label>
-            <button className="button button-primary wide" type="submit" disabled={isSubmitting}>
+            <button
+              className="button button-primary wide"
+              type="submit"
+              disabled={isSubmitting}
+            >
               <Send size={18} />
-              <span>{isSubmitting ? dictionary.quote.submitting : dictionary.quote.button}</span>
+              <span>
+                {isSubmitting
+                  ? dictionary.quote.submitting
+                  : dictionary.quote.button}
+              </span>
             </button>
-            <p className={`form-status ${statusTone === "error" ? "is-error" : ""} wide`} aria-live="polite">
+            <p
+              className={`form-status ${statusTone === "error" ? "is-error" : ""} wide`}
+              aria-live="polite"
+            >
               {status}
             </p>
           </form>
@@ -141,7 +167,9 @@ export function QuoteSection() {
         <div className="footer-inner">
           <div className="footer-copy">
             <BrandWordmark className="footer-wordmark" />
-            <span className="footer-contact-person">{BRAND_CONTACT_PERSON}</span>
+            <span className="footer-contact-person">
+              {BRAND_CONTACT_PERSON}
+            </span>
             <span className="footer-legal-name">{BRAND_FULL_NAME}</span>
             <span>{dictionary.footer}</span>
           </div>

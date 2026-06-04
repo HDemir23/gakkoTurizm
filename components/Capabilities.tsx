@@ -29,6 +29,8 @@ export function Capabilities() {
           <p>{dictionary.capabilities.text}</p>
         </div>
 
+        <div className="capabilities-mobile-scene" aria-hidden="true" />
+
         <div className="capability-grid">
           {cards.map(({ Icon, isAccent, key, number, text, title }) => (
             <article className={isAccent ? "capability-card is-accent" : "capability-card"} key={key} data-reveal>
