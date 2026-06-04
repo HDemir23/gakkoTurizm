@@ -2,19 +2,19 @@
 
 import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
-import { BRAND_CONTACT_EMAIL, BRAND_WEBSITE_SOURCE } from "@/lib/brand";
+import { BRAND_CONTACT_EMAIL, BRAND_CONTACT_PERSON, BRAND_FULL_NAME, BRAND_WEBSITE_SOURCE } from "@/lib/brand";
 import { Send } from "lucide-react";
 import { FormEvent, useCallback, useMemo, useState } from "react";
 
-const formspreeEndpoint = "https://formspree.io/f/mgobevyz";
+const formspreeEndpoint = "https://formspree.io/f/xgobvwza";
 
 const contactInfo = {
-  phoneDisplay: "+90 555 023 00 23",
-  phoneHref: "tel:+905550230023",
+  phoneDisplay: "+90 505 031 43 523",
+  phoneHref: "tel:+9050503143523",
   email: BRAND_CONTACT_EMAIL,
   mapHref: "https://www.google.com/maps/search/?api=1&query=Elazig%20Turkiye",
   addressDisplay: "Elazig / Turkiye",
-  whatsappHref: "https://wa.me/905550230023"
+  whatsappHref: "https://wa.me/9050503143523"
 };
 
 export function QuoteSection() {
@@ -141,6 +141,8 @@ export function QuoteSection() {
         <div className="footer-inner">
           <div className="footer-copy">
             <BrandWordmark className="footer-wordmark" />
+            <span className="footer-contact-person">{BRAND_CONTACT_PERSON}</span>
+            <span className="footer-legal-name">{BRAND_FULL_NAME}</span>
             <span>{dictionary.footer}</span>
           </div>
           <nav className="footer-contact-list" aria-label="Contact shortcuts">

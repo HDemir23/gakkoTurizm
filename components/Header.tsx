@@ -1,17 +1,22 @@
 "use client";
 
-import { BrandWordmark } from "@/components/BrandWordmark";
 import { useLanguage } from "@/components/LanguageProvider";
-import { BRAND_FULL_NAME, BRAND_SHORT_NAME } from "@/lib/brand";
+import { BRAND_CONTACT_PERSON, BRAND_SHORT_NAME } from "@/lib/brand";
 import { languages, type LanguageCode } from "@/lib/i18n";
-import { ChevronDown, Menu, Truck, X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState, type MouseEvent } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type MouseEvent,
+} from "react";
 
 const navItems = [
   { href: "#capabilities", key: "capabilities" },
   { href: "#services", key: "services" },
   { href: "#process", key: "process" },
-  { href: "#contact", key: "contact" }
+  { href: "#contact", key: "contact" },
 ] as const;
 
 export function Header() {
@@ -21,12 +26,21 @@ export function Header() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const activeLanguage = useMemo(() => languages[language], [language]);
-  const languageCodes = useMemo(() => Object.keys(languages) as LanguageCode[], []);
-  const headerClassName = useMemo(() => (isScrolled ? "site-header is-scrolled" : "site-header"), [isScrolled]);
-  const navClassName = useMemo(() => (isMenuOpen ? "site-nav is-open" : "site-nav"), [isMenuOpen]);
+  const languageCodes = useMemo(
+    () => Object.keys(languages) as LanguageCode[],
+    [],
+  );
+  const headerClassName = useMemo(
+    () => (isScrolled ? "site-header is-scrolled" : "site-header"),
+    [isScrolled],
+  );
+  const navClassName = useMemo(
+    () => (isMenuOpen ? "site-nav is-open" : "site-nav"),
+    [isMenuOpen],
+  );
   const languagePickerClassName = useMemo(
     () => (isLanguageOpen ? "language-picker is-open" : "language-picker"),
-    [isLanguageOpen]
+    [isLanguageOpen],
   );
 
   useEffect(() => {
@@ -56,7 +70,7 @@ export function Header() {
       setLanguage(nextLanguage);
       setIsLanguageOpen(false);
     },
-    [setLanguage]
+    [setLanguage],
   );
 
   const toggleMenu = useCallback(() => {
@@ -72,19 +86,30 @@ export function Header() {
   return (
     <header className={headerClassName}>
       <div className="header-shell">
-        <a className="brand" href="#top" aria-label={`${BRAND_SHORT_NAME} home`}>
+        <a
+          className="brand"
+          href="#top"
+          aria-label={`${BRAND_SHORT_NAME} home, ${BRAND_CONTACT_PERSON}`}
+        >
           <span className="brand-mark" aria-hidden="true">
-            <Truck size={20} />
+            <img
+              className="brand-emblem"
+              src="/gakgo-transport23.svg"
+              alt=""
+              width="42"
+              height="42"
+            />
           </span>
           <span className="brand-copy">
-            <span className="brand-name">
-              <BrandWordmark />
-            </span>
-            <span className="brand-tagline">{BRAND_FULL_NAME}</span>
+            <span className="brand-person">{BRAND_CONTACT_PERSON}</span>
           </span>
         </a>
 
-        <nav id="site-nav" className={navClassName} aria-label="Primary navigation">
+        <nav
+          id="site-nav"
+          className={navClassName}
+          aria-label="Primary navigation"
+        >
           {navItems.map((item) => (
             <a key={item.href} href={item.href} onClick={closeMenu}>
               {dictionary.nav[item.key]}
@@ -109,7 +134,12 @@ export function Header() {
               <ChevronDown size={16} aria-hidden="true" />
             </button>
 
-            <div id="language-menu" className="language-menu" role="listbox" aria-label="Language">
+            <div
+              id="language-menu"
+              className="language-menu"
+              role="listbox"
+              aria-label="Language"
+            >
               {languageCodes.map((code) => (
                 <button
                   key={code}

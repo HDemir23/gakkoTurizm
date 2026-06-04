@@ -15,9 +15,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(180deg, rgba(18, 10, 12, 0.16), rgba(52, 7, 18, 0.2) 72%, rgba(52, 7, 18, 0.74)),
-    linear-gradient(90deg, rgba(52, 7, 18, 0.92), rgba(122, 16, 36, 0.46) 46%, rgba(52, 7, 18, 0.12));
+  background: var(--hero-overlay);
 }
 
 .hero-inner {
@@ -41,7 +39,7 @@
   font-size: 6.2rem;
   line-height: 0.96;
   letter-spacing: 0;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero-title-wordmark {

@@ -10,9 +10,7 @@
   pointer-events: none;
   opacity: var(--media-opacity);
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(52, 7, 18, 0.98), rgba(122, 16, 36, 0.5) 44%, rgba(37, 49, 55, 0.18)),
-    linear-gradient(180deg, rgba(16, 11, 13, 0.26), rgba(52, 7, 18, 0.68) 95%);
+  background: var(--hero-media-bg);
   transition: opacity 120ms linear;
 }
 
@@ -21,9 +19,7 @@
   inset: 0;
   z-index: 2;
   content: "";
-  background:
-    linear-gradient(90deg, rgba(52, 7, 18, 0.84), rgba(52, 7, 18, 0.5) 42%, rgba(18, 19, 21, 0.26)),
-    linear-gradient(180deg, rgba(20, 9, 13, 0.24), rgba(20, 9, 13, 0.26) 58%, rgba(52, 7, 18, 0.76));
+  background: var(--hero-media-overlay);
 }
 
 .hero-media-video {

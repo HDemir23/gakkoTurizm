@@ -1,6 +1,8 @@
-# Gakgo Transport
+# GAKGO TRANSPORT23
 
-GakGo markasi icin Next.js + React ile hazirlanmis tek sayfalik parallax lojistik landing sayfasi.
+GAKGO TRANSPORT23 Uluslararası Taşımacılık İç ve Dış Tic. Ltd. Şti. icin Next.js + React ile hazirlanmis tek sayfalik parallax lojistik landing sayfasi.
+
+Yetkili kisi: Murat Güler
 
 ## Komutlar
 

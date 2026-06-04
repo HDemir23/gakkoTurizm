@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import { BRAND_FULL_NAME } from "@/lib/brand";
-import "./globals.css";
-import "../components/HeroMedia.css";
-import "../components/Header.css";
-import "../components/Hero.css";
-import "../components/Capabilities.css";
-import "../components/Services.css";
-import "../components/Process.css";
-import "../components/QuoteSection.css";
+import "./site.css";
 
 export const metadata: Metadata = {
   title: `${BRAND_FULL_NAME} | International Road Transport`,
-  description:
-    "Multilingual GakGo landing page for international road transport."
+  description: `Multilingual ${BRAND_FULL_NAME} landing page for international road transport.`,
+  icons: {
+    icon: [{ url: "/caydacira.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/caydacira.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/caydacira.svg", type: "image/svg+xml" }]
+  }
 };
 
 export default function RootLayout({

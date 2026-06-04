@@ -5,7 +5,7 @@
   height: var(--header-height);
   padding: 10px var(--page-gutter);
   color: var(--white);
-  background: linear-gradient(180deg, rgba(52, 7, 18, 0.82), rgba(52, 7, 18, 0.46));
+  background: var(--header-bg);
   backdrop-filter: blur(18px);
   transition:
     background 180ms ease,
@@ -16,7 +16,7 @@
 
 .site-header.is-scrolled {
   color: var(--ink);
-  background: rgba(255, 250, 246, 0.94);
+  background: var(--header-scrolled-bg);
   box-shadow: 0 12px 36px rgba(23, 20, 22, 0.08);
 }
 
@@ -25,7 +25,7 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(220px, auto) minmax(0, 1fr) auto;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr) auto;
   align-items: center;
   gap: 18px;
 }
@@ -44,34 +44,28 @@
   position: relative;
   display: inline-grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   flex: 0 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius);
   color: var(--white);
-  background:
-    linear-gradient(135deg, var(--burgundy), var(--burgundy-deep)),
-    var(--burgundy);
+  background: transparent;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
 .brand-mark::after {
-  position: absolute;
-  right: 7px;
-  bottom: 7px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--gold-soft);
-  box-shadow: 0 0 18px rgba(240, 199, 142, 0.76);
-  content: "";
+  content: none;
 }
 
-.brand-mark svg {
+.brand-emblem {
   position: relative;
   z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .site-header.is-scrolled .brand-mark {
@@ -111,6 +105,20 @@
 
 .site-header.is-scrolled .brand-tagline {
   color: var(--muted);
+}
+
+.brand-person {
+  overflow: hidden;
+  color: var(--gold-soft);
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-header.is-scrolled .brand-person {
+  color: var(--burgundy);
 }
 
 .site-nav {
@@ -271,7 +279,7 @@
 
 @media (max-width: 980px) {
   .header-shell {
-    grid-template-columns: minmax(190px, 1fr) auto;
+    grid-template-columns: minmax(196px, 1fr) auto;
   }
 
   .site-nav {
@@ -326,16 +334,13 @@
   }
 
   .brand-mark {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
-  .brand-tagline {
-    display: none;
-  }
-
-  .brand-name {
-    max-width: 42vw;
+  .brand-person {
+    max-width: 76px;
+    font-size: 0.76rem;
   }
 
   .language-button {
@@ -350,7 +355,7 @@
 }
 
 @media (max-width: 380px) {
-  .brand-name {
-    max-width: 34vw;
+  .brand-person {
+    display: none;
   }
 }

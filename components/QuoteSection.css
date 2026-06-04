@@ -1,9 +1,7 @@
 .quote-section {
   padding: 86px var(--page-gutter) 34px;
   color: var(--white);
-  background:
-    linear-gradient(120deg, rgba(37, 49, 55, 0.98), rgba(52, 7, 18, 0.94)),
-    var(--steel);
+  background: var(--section-contact-bg);
 }
 
 .quote-layout {
@@ -16,8 +14,8 @@
 .quote-copy h2 {
   margin: 0;
   max-width: 22ch;
-  font-size: 3.25rem;
-  line-height: 1.08;
+  font-size: var(--quote-title-size);
+  line-height: 1.1;
   letter-spacing: 0;
   overflow-wrap: anywhere;
   text-wrap: balance;
@@ -26,26 +24,28 @@
 .quote-copy p:not(.eyebrow) {
   margin: 18px 0 0;
   max-width: 680px;
-  color: rgba(255, 244, 234, 0.74);
-  font-size: 1.08rem;
+  color: var(--text-on-dark-muted);
+  font-size: var(--quote-body-size);
+  line-height: 1.62;
 }
 
 .quote-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  padding: 18px;
-  border: 1px solid rgba(255, 244, 234, 0.14);
+  gap: 15px 16px;
+  padding: 20px;
+  border: 1px solid var(--line-on-dark-subtle);
   border-radius: var(--radius);
-  background: rgba(22, 12, 14, 0.22);
+  background: var(--panel-on-dark);
 }
 
 .quote-form label {
   display: grid;
-  gap: 8px;
-  color: rgba(255, 244, 234, 0.84);
-  font-size: 0.88rem;
-  font-weight: 800;
+  gap: 7px;
+  color: var(--text-on-dark-soft);
+  font-size: var(--quote-label-size);
+  font-weight: 850;
+  line-height: 1.15;
 }
 
 .quote-form .wide {
@@ -55,15 +55,25 @@
 .quote-form input,
 .quote-form textarea {
   width: 100%;
-  border: 1px solid rgba(255, 244, 234, 0.28);
+  border: 1px solid var(--line-on-dark);
   border-radius: var(--radius);
   outline: none;
   color: var(--ink);
-  background: rgba(246, 235, 228, 0.9);
+  background: var(--field-on-dark);
+  font-size: var(--quote-field-size);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: rgba(23, 20, 22, 0.52);
+  font-size: 0.92rem;
+  font-weight: 750;
 }
 
 .quote-form input {
-  height: 46px;
+  height: 44px;
   padding: 0 12px;
 }
 
@@ -76,7 +86,13 @@
 .quote-form input:focus,
 .quote-form textarea:focus {
   border-color: var(--gold-soft);
-  box-shadow: 0 0 0 3px rgba(240, 199, 142, 0.18);
+  box-shadow: var(--focus-ring-gold);
+}
+
+.quote-form .button {
+  min-height: 48px;
+  font-size: var(--quote-button-size);
+  line-height: 1.1;
 }
 
 .quote-form .button-primary {
@@ -94,22 +110,21 @@
   min-height: 22px;
   margin: 0;
   color: var(--gold-soft);
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 800;
+  line-height: 1.35;
 }
 
 .form-status.is-error {
-  color: #ffb4a8;
+  color: var(--danger-soft);
 }
 
 .site-footer {
   position: relative;
   z-index: 2;
   padding: 0 var(--page-gutter) 26px;
-  color: rgba(255, 244, 234, 0.76);
-  background:
-    linear-gradient(120deg, rgba(37, 49, 55, 0.98), rgba(52, 7, 18, 0.94)),
-    var(--steel);
+  color: var(--text-on-dark-faint);
+  background: var(--section-contact-bg);
   font-size: 0.92rem;
 }
 
@@ -121,7 +136,7 @@
   grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
   align-items: center;
   gap: 34px;
-  border-top: 1px solid rgba(255, 244, 234, 0.18);
+  border-top: 1px solid var(--line-on-dark-subtle);
   padding-top: 18px;
 }
 
@@ -131,13 +146,31 @@
   min-width: 0;
 }
 
-.footer-copy span:first-child {
+.footer-copy > .brand-wordmark {
   color: var(--white);
   font-weight: 900;
 }
 
-.footer-copy span:last-child {
-  color: rgba(255, 244, 234, 0.72);
+.footer-wordmark .brand-wordmark-go {
+  color: var(--gold-soft);
+}
+
+.footer-contact-person {
+  color: var(--gold-soft);
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.footer-legal-name {
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.footer-copy > span:last-child {
+  color: var(--text-on-dark-faint);
 }
 
 .footer-contact-list {
@@ -151,7 +184,7 @@
   display: grid;
   gap: 3px;
   min-width: 0;
-  color: rgba(255, 244, 234, 0.72);
+  color: var(--text-on-dark-faint);
 }
 
 .footer-contact-item span {
@@ -200,7 +233,7 @@
   }
 
   .quote-copy h2 {
-    font-size: 2.55rem;
+    font-size: var(--quote-title-size);
   }
 
   .quote-form {

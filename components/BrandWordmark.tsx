@@ -6,11 +6,18 @@ type BrandWordmarkProps = {
 
 export function BrandWordmark({ className }: BrandWordmarkProps) {
   const classNames = ["brand-wordmark", className].filter(Boolean).join(" ");
+  const [primaryName, ...secondaryNameParts] = BRAND_SHORT_NAME.split(" ");
+  const secondaryName = secondaryNameParts.join(" ");
 
   return (
     <span className={classNames} role="text" aria-label={BRAND_SHORT_NAME}>
-      <span>Gak</span>
-      <span className="brand-wordmark-go">Go</span>
+      <span>{primaryName}</span>
+      {secondaryName ? (
+        <>
+          {" "}
+          <span className="brand-wordmark-go">{secondaryName}</span>
+        </>
+      ) : null}
     </span>
   );
 }
