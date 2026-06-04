@@ -17,8 +17,9 @@ const contactInfo = {
   phoneDisplay: "+90 505 031 43 523",
   phoneHref: "tel:+9050503143523",
   email: BRAND_CONTACT_EMAIL,
-  mapHref: "https://www.google.com/maps/search/?api=1&query=Elazig%20Turkiye",
-  addressDisplay: "Tekirdag / Turkiye",
+  mapHref:
+    "https://www.google.com/maps/search/?api=1&query=Tekirda%C4%9F%20T%C3%BCrkiye",
+  addressDisplay: "Tekirdağ / Türkiye",
   whatsappHref: "https://wa.me/9050503143523",
 };
 
@@ -171,7 +172,7 @@ export function QuoteSection() {
               {BRAND_CONTACT_PERSON}
             </span>
             <span className="footer-legal-name">{BRAND_FULL_NAME}</span>
-            <span>{dictionary.footer}</span>
+            {/* <span>{dictionary.footer}</span> */}
           </div>
           <nav className="footer-contact-list" aria-label="Contact shortcuts">
             {footerContacts.map(({ external, href, label, value }) => (

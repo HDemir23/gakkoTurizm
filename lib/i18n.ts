@@ -1,11 +1,12 @@
 import { BRAND_FULL_NAME, BRAND_SHORT_NAME } from "@/lib/brand";
 
 export const languages = {
-  tr: { code: "TR", label: "Turkce", flag: "🇹🇷" },
+  tr: { code: "TR", label: "Türkçe", flag: "🇹🇷" },
+  el: { code: "EL", label: "Ελληνικά", flag: "🇬🇷" },
   en: { code: "EN", label: "English", flag: "🇬🇧" },
   ru: { code: "RU", label: "Русский", flag: "🇷🇺" },
   de: { code: "DE", label: "Deutsch", flag: "🇩🇪" },
-  ro: { code: "RO", label: "Romana", flag: "🇷🇴" }
+  ro: { code: "RO", label: "Română", flag: "🇷🇴" }
 } as const;
 
 export type LanguageCode = keyof typeof languages;
@@ -16,134 +17,279 @@ export const dictionaries = {
   tr: {
     nav: {
       capabilities: "Belgeler",
-      services: "Tasima",
+      services: "Taşıma",
       process: "Operasyon",
-      contact: "Iletisim"
+      contact: "İletişim"
     },
     hero: {
-      eyebrow: "Belgeli uluslararasi kara yolu tasimaciligi",
+      eyebrow: "Belgeli uluslararası kara yolu taşımacılığı",
       title: BRAND_SHORT_NAME,
       lead:
-        "C2 / K1 kapsamina uygun ticari yuk organizasyonu, U-ETDS odakli sefer bilgisi, evrak takibi ve ozel yuk uygunluk kontroluyle Avrupa hattinda planli lojistik hizmeti.",
-      primaryCta: "Tasima teklifi al",
-      secondaryCta: "Belge kapsami"
+        "C2 / K1 kapsamına uygun ticari yük organizasyonu, U-ETDS odaklı sefer bilgisi, evrak takibi ve özel yük uygunluk kontrolüyle Avrupa hattında planlı lojistik hizmeti.",
+      primaryCta: "Taşıma teklifi al",
+      secondaryCta: "Belge kapsamı"
     },
     stats: [
-      { value: "C2 / K1", label: "ticari yuk altyapisi" },
-      { value: "Yuk uygunlugu", label: "belge ve rota on kontrolu" },
-      { value: "TR / EU", label: "gumruk ve rota takibi" }
+      { value: "C2 / K1", label: "ticari yük altyapısı" },
+      { value: "Yük uygunluğu", label: "belge ve rota ön kontrolü" },
+      { value: "TR / EU", label: "gümrük ve rota takibi" }
     ],
-    signals: ["C2 uyumlu operasyon", "K1 yurtiçi tasima", "U-ETDS bilgi hazirligi", "Ozel yuk on kontrolu"],
+    signals: ["C2 uyumlu operasyon", "K1 yurt içi taşıma", "U-ETDS bilgi hazırlığı", "Özel yük ön kontrolü"],
     capabilities: {
       eyebrow: "Belge ve uygunluk",
-      title: "Esnek operasyon, belgeli tasimaci disiplini.",
+      title: "Esnek operasyon, belgeli taşımacı disiplini.",
       text:
-        "Yuk kabulunden once yetki belgesi kapsami, tasit uygunlugu, sefer bildirimi, gumruk evraki ve tehlikeli madde sinifi ayrica kontrol edilir.",
+        "Yük kabulünden önce yetki belgesi kapsamı, taşıt uygunluğu, sefer bildirimi, gümrük evrakı ve tehlikeli madde sınıfı ayrıca kontrol edilir.",
       cards: [
         {
-          title: "C2 / uluslararasi esya tasima",
+          title: "C2 / uluslararası eşya taşıma",
           text:
-            "Ticari yuklerde Turkiye cikisli Avrupa hatlari icin arac, surucu, sefer ve teslim bilgileri tek dosyada toplanir."
+            "Ticari yüklerde Türkiye çıkışlı Avrupa hatları için araç, sürücü, sefer ve teslim bilgileri tek dosyada toplanır."
         },
         {
-          title: "K1 / yurtiçi ticari yuk",
+          title: "K1 / yurt içi ticari yük",
           text:
-            "Yukleme noktasindan liman, antrepo, fabrika veya alici adresine kadar yurtiçi ayak mevzuata uygun planlanir."
+            "Yükleme noktasından liman, antrepo, fabrika veya alıcı adresine kadar yurt içi ayak mevzuata uygun planlanır."
         },
         {
-          title: "U-ETDS ve evrak duzeni",
+          title: "U-ETDS ve evrak düzeni",
           text:
-            "Gonderici, alici, plaka, surucu, yuk cinsi, agirlik ve yukleme-bosaltma bilgileri operasyon basinda netlestirilir."
+            "Gönderici, alıcı, plaka, sürücü, yük cinsi, ağırlık ve yükleme-boşaltma bilgileri operasyon başında netleştirilir."
         },
         {
-          title: "Kontrollu yuk kabul",
+          title: "Kontrollü yük kabul",
           text:
-            "ADR veya ek izin gerektiren yuklerde sinif, UN kodu, ambalaj ve arac uygunlugu sevkiyat oncesinde incelenir."
+            "ADR veya ek izin gerektiren yüklerde sınıf, UN kodu, ambalaj ve araç uygunluğu sevkiyat öncesinde incelenir."
         }
       ]
     },
     services: {
-      eyebrow: "Tasima hizmetleri",
-      title: "Komple tir, parsiyel yuk ve proje parcalarinda surekli operasyon takibi.",
+      eyebrow: "Taşıma hizmetleri",
+      title: "Komple tır, parsiyel yük ve proje parçalarında sürekli operasyon takibi.",
       text:
-        "Yukleme planindan teslim teyidine kadar arac durumu, gumruk evraki ve operasyon guncellemeleri tek koordinasyon surecinde takip edilir.",
+        "Yükleme planından teslim teyidine kadar araç durumu, gümrük evrakı ve operasyon güncellemeleri tek koordinasyon sürecinde takip edilir.",
       items: [
         {
-          title: "Komple tir ve parsiyel tasima",
+          title: "Komple tır ve parsiyel taşıma",
           text:
-            "Paletli ticari urun, makine parcasi, tekstil, ambalaj, otomotiv yan sanayi ve duzenli sevkiyatlar icin kapasite planlanir."
+            "Paletli ticari ürün, makine parçası, tekstil, ambalaj, otomotiv yan sanayi ve düzenli sevkiyatlar için kapasite planlanır."
         },
         {
-          title: "Gumruk ve sinir koordinasyonu",
+          title: "Gümrük ve sınır koordinasyonu",
           text:
-            "Ihracat evraki, alici bilgisi, teslim penceresi ve sinir gecisi sureci gondericiyle acik sekilde paylasilir."
+            "İhracat evrakı, alıcı bilgisi, teslim penceresi ve sınır geçişi süreci göndericiyle açık şekilde paylaşılır."
         },
         {
-          title: "Cok dilli operasyon iletisimi",
+          title: "Çok dilli operasyon iletişimi",
           text:
-            "Turkce, Ingilizce, Rusca, Almanca ve Romence ile surucu, gonderici ve alici arasindaki bilgi kaybi azaltilir."
+            "Türkçe ve Yunanca iletişimle sürücü, gönderici ve alıcı arasındaki bilgi kaybı azaltılır."
         }
       ]
     },
     process: {
-      eyebrow: "Operasyon akisi",
-      title: "Once uygunluk, sonra net fiyat ve sevkiyat.",
+      eyebrow: "Operasyon akışı",
+      title: "Önce uygunluk, sonra net fiyat ve sevkiyat.",
       steps: [
         {
-          title: "Yuk ve belge bilgisi",
-          text: "Cikis-varis, yuk cinsi, olcu, agirlik, fatura/irsaliye, gumruk ve varsa ADR bilgisi alinir."
+          title: "Yük ve belge bilgisi",
+          text: "Çıkış-varış, yük cinsi, ölçü, ağırlık, fatura/irsaliye, gümrük ve varsa ADR bilgisi alınır."
         },
         {
-          title: "Yetki ve arac kontrolu",
-          text: "Belge kapsami, tasit uygunlugu, surucu bilgisi, rota ve ozel yuk kabul kosullari kontrol edilir."
+          title: "Yetki ve araç kontrolü",
+          text: "Belge kapsamı, taşıt uygunluğu, sürücü bilgisi, rota ve özel yük kabul koşulları kontrol edilir."
         },
         {
-          title: "Yukleme ve sefer",
-          text: "Yukleme saati, plaka, sefer bilgisi ve sinir/gumruk gecis durumu operasyon boyunca guncellenir."
+          title: "Yükleme ve sefer",
+          text: "Yükleme saati, plaka, sefer bilgisi ve sınır/gümrük geçiş durumu operasyon boyunca güncellenir."
         },
         {
-          title: "Teslim ve kapanis",
-          text: "Teslim teyidi, alici notu, eksik/hasar kontrolu ve gerekli kapanis belgeleri paylasilir."
+          title: "Teslim ve kapanış",
+          text: "Teslim teyidi, alıcı notu, eksik/hasar kontrolü ve gerekli kapanış belgeleri paylaşılır."
         }
       ]
     },
     quote: {
       eyebrow: "Teklif ve sevkiyat",
-      title: "Yuk, guzergah ve gerekli belgeleri iletin; uygun araci ve tasima planini netlestirelim.",
+      title: "Yük, güzergâh ve gerekli belgeleri iletin; uygun aracı ve taşıma planını netleştirelim.",
       text:
-        "Talep geldikten sonra belge kapsami, yuk sinifi, arac uygunlugu, gumruk evraki ve teslim penceresi ilk operasyon kontrolunden gecirilir.",
+        "Talep geldikten sonra belge kapsamı, yük sınıfı, araç uygunluğu, gümrük evrakı ve teslim penceresi ilk operasyon kontrolünden geçirilir.",
       fields: {
         name: "Ad soyad",
         company: "Firma",
         contact: "E-posta veya telefon",
-        route: "Guzergah",
-        routePlaceholder: "Istanbul - Berlin",
-        cargo: "Yuk bilgisi",
-        cargoPlaceholder: "Palet sayisi, kilo, olcu, teslim tarihi"
+        route: "Güzergâh",
+        routePlaceholder: "İstanbul - Berlin",
+        cargo: "Yük bilgisi",
+        cargoPlaceholder: "Palet sayısı, kilo, ölçü, teslim tarihi"
       },
-      button: "Tasima talebi olustur",
-      submitting: "Talep gonderiliyor...",
-      success: "Talebiniz alindi. Yuk, belge ve rota bilgileri operasyon on kontrolune aktarilacak.",
-      error: "Talep gonderilemedi. Lutfen daha sonra tekrar deneyin veya direkt iletisim kanallarini kullanin."
+      button: "Taşıma talebi oluştur",
+      submitting: "Talep gönderiliyor...",
+      success: "Talebiniz alındı. Yük, belge ve rota bilgileri operasyon ön kontrolüne aktarılacak.",
+      error: "Talep gönderilemedi. Lütfen daha sonra tekrar deneyin veya direkt iletişim kanallarını kullanın."
     },
     contact: {
-      eyebrow: "Direkt iletisim",
-      title: "Teklif, evrak veya rota icin dogru kanali secin.",
-      text: "Telefonla hizli gorusun, e-posta ile yuk detaylarini gonderin veya konumu haritada acin.",
-      mailSubject: `${BRAND_FULL_NAME} tasima talebi`,
+      eyebrow: "Direkt iletişim",
+      title: "Teklif, evrak veya rota için doğru kanalı seçin.",
+      text: "Telefonla hızlı görüşün, e-posta ile yük detaylarını gönderin veya konumu haritada açın.",
+      mailSubject: `${BRAND_FULL_NAME} taşıma talebi`,
       channels: {
         phone: { label: "Telefon", action: "Ara" },
-        email: { label: "E-posta", action: "Mail ac" },
+        email: { label: "E-posta", action: "Mail aç" },
         whatsapp: { label: "WhatsApp", action: "Mesaj yaz" },
-        address: { label: "Adres", action: "Haritada ac" }
+        address: { label: "Adres", action: "Haritada aç" }
       },
       footerLinks: {
         phone: "Ara",
-        email: "Mail gonder",
+        email: "Mail gönder",
         address: "Harita"
       }
     },
-    footer: "Belge, rota ve yuk uygunlugu on kontroluyle kara yolu tasimaciligi."
+    footer: "Belge, rota ve yük uygunluğu ön kontrolüyle kara yolu taşımacılığı."
+  },
+  el: {
+    nav: {
+      capabilities: "Έγγραφα",
+      services: "Μεταφορές",
+      process: "Λειτουργία",
+      contact: "Επικοινωνία"
+    },
+    hero: {
+      eyebrow: "Πιστοποιημένες διεθνείς οδικές μεταφορές",
+      title: BRAND_SHORT_NAME,
+      lead:
+        "Προγραμματισμένη υπηρεσία logistics στη γραμμή Ευρώπης με οργάνωση εμπορικών φορτίων σύμφωνα με C2 / K1, στοιχεία δρομολογίου για U-ETDS, παρακολούθηση εγγράφων και έλεγχο καταλληλότητας ειδικών φορτίων.",
+      primaryCta: "Ζητήστε προσφορά μεταφοράς",
+      secondaryCta: "Πεδίο εγγράφων"
+    },
+    stats: [
+      { value: "C2 / K1", label: "υποδομή εμπορικού φορτίου" },
+      { value: "Καταλληλότητα φορτίου", label: "προέλεγχος εγγράφων και διαδρομής" },
+      { value: "TR / EU", label: "τελωνειακή και δρομολογιακή παρακολούθηση" }
+    ],
+    signals: [
+      "Λειτουργία συμβατή με C2",
+      "Εγχώρια μεταφορά K1",
+      "Προετοιμασία στοιχείων U-ETDS",
+      "Προέλεγχος ειδικού φορτίου"
+    ],
+    capabilities: {
+      eyebrow: "Έγγραφα και συμμόρφωση",
+      title: "Ευέλικτη λειτουργία με πειθαρχία αδειοδοτημένου μεταφορέα.",
+      text:
+        "Πριν από την αποδοχή φορτίου ελέγχονται το πεδίο της άδειας, η καταλληλότητα του οχήματος, η δήλωση δρομολογίου, τα τελωνειακά έγγραφα και η κατηγορία επικίνδυνων εμπορευμάτων.",
+      cards: [
+        {
+          title: "C2 / διεθνής μεταφορά εμπορευμάτων",
+          text:
+            "Για εμπορικά φορτία με αναχώρηση από την Τουρκία προς ευρωπαϊκές γραμμές, τα στοιχεία οχήματος, οδηγού, δρομολογίου και παράδοσης συγκεντρώνονται σε έναν φάκελο."
+        },
+        {
+          title: "K1 / εγχώριο εμπορικό φορτίο",
+          text:
+            "Το εγχώριο σκέλος από το σημείο φόρτωσης έως λιμάνι, αποθήκη, εργοστάσιο ή διεύθυνση παραλήπτη σχεδιάζεται σύμφωνα με τη νομοθεσία."
+        },
+        {
+          title: "U-ETDS και τάξη εγγράφων",
+          text:
+            "Αποστολέας, παραλήπτης, πινακίδα, οδηγός, είδος φορτίου, βάρος και στοιχεία φόρτωσης-εκφόρτωσης διευκρινίζονται στην αρχή της λειτουργίας."
+        },
+        {
+          title: "Ελεγχόμενη αποδοχή φορτίου",
+          text:
+            "Για φορτία ADR ή φορτία που απαιτούν πρόσθετη άδεια, η κλάση, ο κωδικός UN, η συσκευασία και η καταλληλότητα του οχήματος εξετάζονται πριν από την αποστολή."
+        }
+      ]
+    },
+    services: {
+      eyebrow: "Υπηρεσίες μεταφοράς",
+      title: "Συνεχής λειτουργική παρακολούθηση για πλήρη φορτία, μερικά φορτία και project cargo.",
+      text:
+        "Από τον σχεδιασμό φόρτωσης έως την επιβεβαίωση παράδοσης, η κατάσταση οχήματος, τα τελωνειακά έγγραφα και οι λειτουργικές ενημερώσεις παρακολουθούνται σε μία συντονισμένη διαδικασία.",
+      items: [
+        {
+          title: "Πλήρες φορτίο και μερική μεταφορά",
+          text:
+            "Προγραμματίζεται χωρητικότητα για εμπορεύματα σε παλέτες, εξαρτήματα μηχανημάτων, κλωστοϋφαντουργικά, συσκευασίες, ανταλλακτικά αυτοκινητοβιομηχανίας και τακτικές αποστολές."
+        },
+        {
+          title: "Συντονισμός τελωνείων και συνόρων",
+          text:
+            "Τα έγγραφα εξαγωγής, τα στοιχεία παραλήπτη, το παράθυρο παράδοσης και η διαδικασία διέλευσης συνόρων κοινοποιούνται καθαρά στον αποστολέα."
+        },
+        {
+          title: "Πολύγλωσση λειτουργική επικοινωνία",
+          text:
+            "Η επικοινωνία στα Τουρκικά και στα Ελληνικά μειώνει την απώλεια πληροφορίας μεταξύ οδηγού, αποστολέα και παραλήπτη."
+        }
+      ]
+    },
+    process: {
+      eyebrow: "Ροή λειτουργίας",
+      title: "Πρώτα έλεγχος καταλληλότητας, μετά καθαρή τιμή και αποστολή.",
+      steps: [
+        {
+          title: "Στοιχεία φορτίου και εγγράφων",
+          text:
+            "Λαμβάνονται αφετηρία-προορισμός, είδος φορτίου, διαστάσεις, βάρος, τιμολόγιο/δελτίο αποστολής, τελωνείο και τυχόν στοιχεία ADR."
+        },
+        {
+          title: "Έλεγχος άδειας και οχήματος",
+          text:
+            "Ελέγχονται το πεδίο εγγράφων, η καταλληλότητα οχήματος, τα στοιχεία οδηγού, η διαδρομή και οι ειδικοί όροι αποδοχής φορτίου."
+        },
+        {
+          title: "Φόρτωση και δρομολόγιο",
+          text:
+            "Η ώρα φόρτωσης, η πινακίδα, τα στοιχεία δρομολογίου και η κατάσταση συνόρων/τελωνείου ενημερώνονται σε όλη τη λειτουργία."
+        },
+        {
+          title: "Παράδοση και κλείσιμο",
+          text:
+            "Κοινοποιούνται η επιβεβαίωση παράδοσης, οι σημειώσεις παραλήπτη, ο έλεγχος ελλείψεων/ζημιών και τα απαραίτητα έγγραφα κλεισίματος."
+        }
+      ]
+    },
+    quote: {
+      eyebrow: "Προσφορά και αποστολή",
+      title:
+        "Στείλτε το φορτίο, τη διαδρομή και τα απαραίτητα έγγραφα· να οριστικοποιήσουμε το κατάλληλο όχημα και το πλάνο μεταφοράς.",
+      text:
+        "Μετά την παραλαβή του αιτήματος, το πεδίο εγγράφων, η κατηγορία φορτίου, η καταλληλότητα οχήματος, τα τελωνειακά έγγραφα και το παράθυρο παράδοσης περνούν από αρχικό λειτουργικό έλεγχο.",
+      fields: {
+        name: "Ονοματεπώνυμο",
+        company: "Εταιρεία",
+        contact: "E-mail ή τηλέφωνο",
+        route: "Διαδρομή",
+        routePlaceholder: "Κωνσταντινούπολη - Βερολίνο",
+        cargo: "Στοιχεία φορτίου",
+        cargoPlaceholder: "Αριθμός παλετών, βάρος, διαστάσεις, ημερομηνία παράδοσης"
+      },
+      button: "Δημιουργία αιτήματος μεταφοράς",
+      submitting: "Το αίτημα αποστέλλεται...",
+      success:
+        "Το αίτημά σας ελήφθη. Τα στοιχεία φορτίου, εγγράφων και διαδρομής θα περάσουν στον προέλεγχο λειτουργίας.",
+      error:
+        "Δεν ήταν δυνατή η αποστολή του αιτήματος. Δοκιμάστε ξανά αργότερα ή χρησιμοποιήστε τα άμεσα κανάλια επικοινωνίας."
+    },
+    contact: {
+      eyebrow: "Άμεση επικοινωνία",
+      title: "Επιλέξτε το σωστό κανάλι για προσφορά, έγγραφα ή διαδρομή.",
+      text:
+        "Καλέστε για γρήγορο συντονισμό, στείλτε τα στοιχεία φορτίου με e-mail ή ανοίξτε την τοποθεσία στον χάρτη.",
+      mailSubject: `Αίτημα μεταφοράς ${BRAND_FULL_NAME}`,
+      channels: {
+        phone: { label: "Τηλέφωνο", action: "Κλήση" },
+        email: { label: "E-mail", action: "Άνοιγμα mail" },
+        whatsapp: { label: "WhatsApp", action: "Μήνυμα" },
+        address: { label: "Διεύθυνση", action: "Άνοιγμα χάρτη" }
+      },
+      footerLinks: {
+        phone: "Κλήση",
+        email: "E-mail",
+        address: "Χάρτης"
+      }
+    },
+    footer: "Οδικές μεταφορές με προέλεγχο εγγράφων, διαδρομής και καταλληλότητας φορτίου."
   },
   en: {
     nav: {
@@ -213,7 +359,7 @@ export const dictionaries = {
         {
           title: "Multilingual operations",
           text:
-            "Turkish, English, Russian, German and Romanian communication reduces gaps between driver, shipper and consignee."
+            "Turkish and Greek communication reduces gaps between driver, shipper and consignee."
         }
       ]
     },
@@ -333,7 +479,7 @@ export const dictionaries = {
         },
         {
           title: "Многоязычная координация",
-          text: "Турецкий, английский, русский, немецкий и румынский упрощают связь сторон."
+          text: "Турецкий и греческий упрощают связь между водителем, отправителем и получателем."
         },
         {
           title: "Маршрут, таможня и граница",
@@ -446,7 +592,7 @@ export const dictionaries = {
         },
         {
           title: "Mehrsprachige Koordination",
-          text: "Turkisch, Englisch, Russisch, Deutsch und Rumanisch erleichtern die Kommunikation."
+          text: "Türkisch und Griechisch erleichtern die Kommunikation zwischen Fahrer, Absender und Empfänger."
         },
         {
           title: "Zoll, Route und Grenze",
@@ -559,7 +705,7 @@ export const dictionaries = {
         },
         {
           title: "Coordonare multilingva",
-          text: "Turca, engleza, rusa, germana si romana simplifica legatura dintre expeditor si destinatar."
+          text: "Turca si greaca simplifica legatura dintre sofer, expeditor si destinatar."
         },
         {
           title: "Vama, ruta si frontiera",
