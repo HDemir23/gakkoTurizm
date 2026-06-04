@@ -12,9 +12,8 @@ import {
 import { useMemo } from "react";
 
 const laneIcons = [ArrowRightLeft, Globe2, MapPinned, Truck];
-const visualNodes = ["TR", "GR", "EU"];
 
-export function Routes() {
+export function TransportRoutes() {
   const { dictionary } = useLanguage();
   const lanes = useMemo(
     () =>
@@ -28,38 +27,46 @@ export function Routes() {
 
   return (
     <section className="section section-light routes-section" id="routes">
-      <div className="section-inner routes-layout">
-        <div className="routes-copy" data-reveal>
+      <div className="section-inner routes-stack">
+        <div className="section-heading routes-heading" data-reveal>
           <p className="eyebrow">{dictionary.routes.eyebrow}</p>
           <h2>{dictionary.routes.title}</h2>
           <p>{dictionary.routes.text}</p>
+        </div>
 
-          <article className="route-highlight">
-            <div className="route-highlight-top">
-              <span className="route-badge">
-                <Star size={15} aria-hidden="true" />
-                {dictionary.routes.primary.badge}
-              </span>
-              <RouteIcon size={24} aria-hidden="true" />
-            </div>
+        <article className="route-primary" data-reveal>
+          <div className="route-primary-copy">
+            <span className="route-badge">
+              <Star size={15} aria-hidden="true" />
+              {dictionary.routes.primary.badge}
+            </span>
             <h3>{dictionary.routes.primary.title}</h3>
             <p>{dictionary.routes.primary.text}</p>
+          </div>
 
-            <div className="route-line-visual" aria-hidden="true">
-              {visualNodes.map((node) => (
-                <span className="route-node" key={node}>
-                  <strong>{node}</strong>
-                </span>
-              ))}
+          <div className="route-primary-map" aria-hidden="true">
+            <div className="route-terminal">
+              <strong>TR</strong>
+              <span>{dictionary.routes.primary.stats[0]}</span>
             </div>
 
-            <div className="route-stats">
-              {dictionary.routes.primary.stats.map((stat) => (
-                <span key={stat}>{stat}</span>
-              ))}
+            <div className="route-bridge">
+              <span />
+              <ArrowRightLeft size={24} />
+              <span />
             </div>
-          </article>
-        </div>
+
+            <div className="route-terminal">
+              <strong>GR</strong>
+              <span>{dictionary.routes.primary.stats[1]}</span>
+            </div>
+          </div>
+
+          <div className="route-primary-footer">
+            <RouteIcon size={18} aria-hidden="true" />
+            <span>{dictionary.routes.primary.stats[2]}</span>
+          </div>
+        </article>
 
         <div className="route-grid">
           {lanes.map(({ Icon, key, points, text, title }) => (
