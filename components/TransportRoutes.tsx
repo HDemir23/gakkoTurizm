@@ -8,16 +8,25 @@ import {
   Route as RouteIcon,
   Star,
   Truck,
+  type LucideIcon,
 } from "lucide-react";
 import { useMemo } from "react";
+import type { Dictionary } from "@/lib/i18n";
 
-const laneIcons = [ArrowRightLeft, Globe2, MapPinned, Truck];
+type RouteLane = Dictionary["routes"]["lanes"][number];
+
+type RouteLaneCard = RouteLane & {
+  Icon: LucideIcon;
+  key: string;
+};
+
+const laneIcons: readonly LucideIcon[] = [ArrowRightLeft, Globe2, MapPinned, Truck];
 
 export function TransportRoutes() {
   const { dictionary } = useLanguage();
-  const lanes = useMemo(
+  const lanes = useMemo<readonly RouteLaneCard[]>(
     () =>
-      dictionary.routes.lanes.map((lane, index) => ({
+      dictionary.routes.lanes.map((lane: RouteLane, index: number): RouteLaneCard => ({
         ...lane,
         Icon: laneIcons[index] ?? RouteIcon,
         key: `route-${index}`,
@@ -69,7 +78,7 @@ export function TransportRoutes() {
         </article>
 
         <div className="route-grid">
-          {lanes.map(({ Icon, key, points, text, title }) => (
+          {lanes.map(({ Icon, key, points, text, title }: RouteLaneCard) => (
             <article className="route-card" key={key} data-reveal>
               <div className="route-card-head">
                 <span className="route-icon">
@@ -79,7 +88,7 @@ export function TransportRoutes() {
               </div>
               <p>{text}</p>
               <div className="route-point-list" aria-label={title}>
-                {points.map((point) => (
+                {points.map((point: string) => (
                   <span className="route-point" key={point}>
                     {point}
                   </span>
