@@ -2,6 +2,8 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 30;
+  width: 100%;
+  max-width: 100vw;
   height: var(--header-height);
   padding: 10px var(--page-gutter);
   color: var(--white);
@@ -22,6 +24,7 @@
 
 .header-shell {
   width: min(1180px, 100%);
+  min-width: 0;
   height: 100%;
   margin: 0 auto;
   display: grid;
@@ -169,6 +172,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .icon-button,
@@ -291,6 +295,7 @@
     justify-self: auto;
     gap: 4px;
     padding: 10px;
+    max-width: calc(100vw - (var(--page-gutter) * 2));
     color: var(--ink);
     background: var(--surface);
     box-shadow: var(--shadow);
@@ -311,6 +316,7 @@
   .site-nav a {
     min-height: 42px;
     padding: 0 12px;
+    white-space: normal;
   }
 
   .nav-toggle {
@@ -349,13 +355,38 @@
   }
 
   .language-menu {
-    right: -50px;
-    width: 174px;
+    right: 0;
+    width: min(174px, calc(100vw - (var(--page-gutter) * 2)));
   }
 }
 
 @media (max-width: 380px) {
+  .site-header {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .header-shell {
+    gap: 8px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
   .brand-person {
     display: none;
+  }
+
+  .brand-mark,
+  .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .language-button {
+    min-width: 48px;
+    height: 36px;
+    padding: 0 7px;
   }
 }
