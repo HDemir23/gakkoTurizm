@@ -11,12 +11,9 @@ export function BrandWordmark({ className }: BrandWordmarkProps) {
 
   return (
     <span className={classNames} role="text" aria-label={BRAND_SHORT_NAME}>
-      <span>{primaryName}</span>
+      <span className="brand-wordmark-primary">{primaryName}</span>
       {secondaryName ? (
-        <>
-          {" "}
-          <span className="brand-wordmark-go">{secondaryName}</span>
-        </>
+        <span className="brand-wordmark-go">{secondaryName}</span>
       ) : null}
     </span>
   );

@@ -62,9 +62,12 @@ h3 {
 }
 
 .brand-wordmark {
-  display: inline;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.18em;
   color: inherit;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .brand-wordmark-go {

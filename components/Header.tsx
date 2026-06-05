@@ -21,11 +21,29 @@ const navItems = [
   { href: "#contact", key: "contact" },
 ] as const;
 
+const worldClocks = [
+  { flag: "🇬🇷", label: "Yunanistan", timeZone: "Europe/Athens" },
+  { flag: "🇹🇷", label: "Türkiye", timeZone: "Europe/Istanbul" },
+  { flag: "🇦🇱", label: "Arnavutluk", timeZone: "Europe/Tirane" },
+  { flag: "🇷🇸", label: "Sırbistan", timeZone: "Europe/Belgrade" },
+] as const;
+
+const clockFormatters = worldClocks.map(
+  ({ timeZone }) =>
+    new Intl.DateTimeFormat("tr-TR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23",
+      timeZone,
+    }),
+);
+
 export function Header() {
   const { language, dictionary, setLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [clockNow, setClockNow] = useState<Date | null>(null);
 
   const activeLanguage = useMemo(() => languages[language], [language]);
   const languageCodes = useMemo(
@@ -43,6 +61,14 @@ export function Header() {
   const languagePickerClassName = useMemo(
     () => (isLanguageOpen ? "language-picker is-open" : "language-picker"),
     [isLanguageOpen],
+  );
+  const clockItems = useMemo(
+    () =>
+      worldClocks.map((clock, index) => ({
+        ...clock,
+        time: clockNow ? clockFormatters[index].format(clockNow) : "--:--",
+      })),
+    [clockNow],
   );
 
   useEffect(() => {
@@ -62,6 +88,29 @@ export function Header() {
 
     document.addEventListener("keydown", onKeydown);
     return () => document.removeEventListener("keydown", onKeydown);
+  }, []);
+
+  useEffect(() => {
+    const updateClock = () => setClockNow(new Date());
+    let intervalId: number | undefined;
+    const now = new Date();
+    const nextMinuteDelay =
+      (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+    updateClock();
+
+    const timeoutId = window.setTimeout(() => {
+      updateClock();
+      intervalId = window.setInterval(updateClock, 60_000);
+    }, nextMinuteDelay);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+
+      if (intervalId) {
+        window.clearInterval(intervalId);
+      }
+    };
   }, []);
 
   const closeMenu = useCallback(() => setIsMenuOpen(false), []);
@@ -172,6 +221,22 @@ export function Header() {
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
+      </div>
+
+      <div className="world-clock-strip" aria-label="Dünya saatleri">
+        {clockItems.map((clock) => (
+          <time
+            key={clock.timeZone}
+            className="world-clock"
+            dateTime={clockNow?.toISOString()}
+            aria-label={`${clock.label} yerel saat ${clock.time}`}
+          >
+            <span className="world-clock-flag" aria-hidden="true">
+              {clock.flag}
+            </span>
+            <span className="world-clock-time">{clock.time}</span>
+          </time>
+        ))}
       </div>
     </header>
   );
