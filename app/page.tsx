@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { HeroMedia } from "@/components/HeroMedia";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { OperationsGallery } from "@/components/OperationsGallery";
 import { Process } from "@/components/Process";
 import { QuoteSection } from "@/components/QuoteSection";
 import { Services } from "@/components/Services";
@@ -24,6 +25,7 @@ export default function Home() {
         <Services />
         <TransportRoutes />
         <Process />
+        <OperationsGallery />
         <QuoteSection />
       </main>
     </LanguageProvider>

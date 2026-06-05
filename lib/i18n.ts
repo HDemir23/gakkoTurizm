@@ -20,6 +20,7 @@ export const dictionaries = {
       services: "Taşıma",
       routes: "Rotalar",
       process: "Operasyon",
+      gallery: "Galeri",
       contact: "İletişim"
     },
     hero: {
@@ -33,7 +34,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "ticari yük altyapısı" },
       { value: "Yük uygunluğu", label: "belge ve rota ön kontrolü" },
-      { value: "TR / EU", label: "gümrük ve rota takibi" }
+      { value: "Balkan / Avrupa", label: "sınır ve rota takibi" }
     ],
     signals: ["C2 uyumlu operasyon", "K1 yurt içi taşıma", "U-ETDS bilgi hazırlığı", "Özel yük ön kontrolü"],
     capabilities: {
@@ -97,7 +98,7 @@ export const dictionaries = {
         title: "Türkiye ↔ Yunanistan",
         text:
           "Yunanistan-Türkiye hattında düzenli gidiş-dönüş takip; çıkış, sınır geçişi, gümrük evrakı ve teslim penceresi tek akışta yönetilir.",
-        stats: ["TR çıkış", "GR varış", "Dönüş hattı"]
+        stats: ["Türkiye çıkış", "Yunanistan varış", "Dönüş hattı"]
       },
       lanes: [
         {
@@ -107,22 +108,40 @@ export const dictionaries = {
           points: ["Yunanistan", "Türkiye"]
         },
         {
-          title: "Balkanlar ve Avrupa hattı",
+          title: "Türkiye - Sırbistan",
           text:
-            "Balkan geçişleri üzerinden Avrupa teslimleri için rota, evrak ve sınır süreci takip edilir.",
-          points: ["Balkanlar", "Avrupa"]
+            "Türkiye çıkışlı Sırbistan hattında yükleme, sınır geçişi ve teslim zamanı tek operasyon akışında takip edilir.",
+          points: ["Türkiye", "Sırbistan"]
         },
         {
-          title: "TR - Arnavutluk / Makedonya",
+          title: "Sırbistan - Kosova",
           text:
-            "Türkiye çıkışlı Arnavutluk ve Makedonya yönlerinde parsiyel veya komple yük planı yapılır.",
-          points: ["Türkiye", "Arnavutluk", "Makedonya"]
+            "Sırbistan üzerinden Kosova bağlantılarında rota, evrak ve boşaltma bilgisi sevkiyat öncesinde netleştirilir.",
+          points: ["Sırbistan", "Kosova"]
         },
         {
-          title: "TR - Sırbistan / Kosova / Karadağ / Bosna Hersek",
+          title: "Türkiye - Arnavutluk",
           text:
-            "Sırbistan, Kosova, Karadağ ve Bosna Hersek hatlarında yükleme ve teslim zamanları sınır geçişleriyle birlikte takip edilir.",
-          points: ["Türkiye", "Sırbistan", "Kosova", "Karadağ", "Bosna Hersek"]
+            "Türkiye çıkışlı Arnavutluk hattında komple veya parsiyel yük için sınır ve teslim planı hazırlanır.",
+          points: ["Türkiye", "Arnavutluk"]
+        },
+        {
+          title: "Arnavutluk - Karadağ",
+          text:
+            "Arnavutluk-Karadağ bağlantısında ara geçişler, alıcı bilgisi ve teslim penceresi birlikte takip edilir.",
+          points: ["Arnavutluk", "Karadağ"]
+        },
+        {
+          title: "Türkiye - Makedonya",
+          text:
+            "Makedonya yönünde yük cinsi, güzergâh ve sınır süreci sevkiyat başlamadan kontrol edilir.",
+          points: ["Türkiye", "Makedonya"]
+        },
+        {
+          title: "Türkiye - Bosna Hersek",
+          text:
+            "Bosna Hersek hattında uzun geçiş planı, teslim adresi ve gümrük evrakı koordineli şekilde yürütülür.",
+          points: ["Türkiye", "Bosna Hersek"]
         }
       ]
     },
@@ -147,6 +166,27 @@ export const dictionaries = {
           text: "Teslim teyidi, alıcı notu, eksik/hasar kontrolü ve gerekli kapanış belgeleri paylaşılır."
         }
       ]
+    },
+    gallery: {
+      eyebrow: "Saha galerisi",
+      title: "Yükleme, araç ve rota görüntüleri tek akışta.",
+      text:
+        "Kamyon, yükleme ve sevkiyat anlarından gelen fotoğraf ve videolar farklı ölçüleri korunarak düzenli bir galeride toplanır.",
+      mediaCount: "medya kaydı",
+      showAll: "Tümünü göster",
+      showLess: "Daha az göster",
+      openLabel: "Aç",
+      closeLabel: "Kapat",
+      filterLabel: "Galeri filtresi",
+      filters: {
+        all: "Tümü",
+        trucks: "Araçlar",
+        loading: "Yükleme"
+      },
+      categories: {
+        trucks: "Araç",
+        loading: "Yükleme"
+      }
     },
     quote: {
       eyebrow: "Teklif ve sevkiyat",
@@ -192,6 +232,7 @@ export const dictionaries = {
       services: "Μεταφορές",
       routes: "Διαδρομές",
       process: "Λειτουργία",
+      gallery: "Συλλογή",
       contact: "Επικοινωνία"
     },
     hero: {
@@ -205,7 +246,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "υποδομή εμπορικού φορτίου" },
       { value: "Καταλληλότητα φορτίου", label: "προέλεγχος εγγράφων και διαδρομής" },
-      { value: "TR / EU", label: "τελωνειακή και δρομολογιακή παρακολούθηση" }
+      { value: "Βαλκάνια / Ευρώπη", label: "παρακολούθηση συνόρων και διαδρομής" }
     ],
     signals: [
       "Λειτουργία συμβατή με C2",
@@ -274,7 +315,7 @@ export const dictionaries = {
         title: "Τουρκία ↔ Ελλάδα",
         text:
           "Στη γραμμή Ελλάδα-Τουρκία παρακολουθείται τακτικά η μετάβαση και η επιστροφή· αναχώρηση, διέλευση συνόρων, τελωνειακά έγγραφα και παράθυρο παράδοσης διαχειρίζονται σε μία ροή.",
-        stats: ["Αναχώρηση TR", "Άφιξη GR", "Γραμμή επιστροφής"]
+        stats: ["Αναχώρηση Τουρκίας", "Άφιξη Ελλάδας", "Γραμμή επιστροφής"]
       },
       lanes: [
         {
@@ -284,22 +325,40 @@ export const dictionaries = {
           points: ["Ελλάδα", "Τουρκία"]
         },
         {
-          title: "Γραμμή Βαλκανίων και Ευρώπης",
+          title: "Τουρκία - Σερβία",
           text:
-            "Για παραδόσεις στην Ευρώπη μέσω βαλκανικών διελεύσεων παρακολουθούνται η διαδρομή, τα έγγραφα και η διαδικασία συνόρων.",
-          points: ["Βαλκάνια", "Ευρώπη"]
+            "Στη γραμμή από Τουρκία προς Σερβία παρακολουθούνται η φόρτωση, η διέλευση συνόρων και ο χρόνος παράδοσης σε μία λειτουργική ροή.",
+          points: ["Τουρκία", "Σερβία"]
         },
         {
-          title: "TR - Αλβανία / Μακεδονία",
+          title: "Σερβία - Κόσοβο",
           text:
-            "Για κατευθύνσεις από την Τουρκία προς Αλβανία και Μακεδονία σχεδιάζεται μερικό ή πλήρες φορτίο.",
-          points: ["Τουρκία", "Αλβανία", "Μακεδονία"]
+            "Για συνδέσεις από Σερβία προς Κόσοβο, η διαδρομή, τα έγγραφα και τα στοιχεία εκφόρτωσης διευκρινίζονται πριν από την αποστολή.",
+          points: ["Σερβία", "Κόσοβο"]
         },
         {
-          title: "TR - Σερβία / Κόσοβο / Μαυροβούνιο / Βοσνία-Ερζεγοβίνη",
+          title: "Τουρκία - Αλβανία",
           text:
-            "Στις γραμμές Σερβίας, Κοσόβου, Μαυροβουνίου και Βοσνίας-Ερζεγοβίνης, οι χρόνοι φόρτωσης και παράδοσης παρακολουθούνται μαζί με τις διελεύσεις συνόρων.",
-          points: ["Τουρκία", "Σερβία", "Κόσοβο", "Μαυροβούνιο", "Βοσνία-Ερζεγοβίνη"]
+            "Στη γραμμή από Τουρκία προς Αλβανία οργανώνεται πλάνο συνόρων και παράδοσης για πλήρη ή μερικά φορτία.",
+          points: ["Τουρκία", "Αλβανία"]
+        },
+        {
+          title: "Αλβανία - Μαυροβούνιο",
+          text:
+            "Στη σύνδεση Αλβανία-Μαυροβούνιο παρακολουθούνται οι ενδιάμεσες διελεύσεις, τα στοιχεία παραλήπτη και το παράθυρο παράδοσης.",
+          points: ["Αλβανία", "Μαυροβούνιο"]
+        },
+        {
+          title: "Τουρκία - Μακεδονία",
+          text:
+            "Προς Μακεδονία ελέγχονται το είδος φορτίου, η διαδρομή και η διαδικασία συνόρων πριν από την αναχώρηση.",
+          points: ["Τουρκία", "Μακεδονία"]
+        },
+        {
+          title: "Τουρκία - Βοσνία-Ερζεγοβίνη",
+          text:
+            "Στη γραμμή Βοσνίας-Ερζεγοβίνης, το πλάνο μεγάλης διαδρομής, η διεύθυνση παράδοσης και τα τελωνειακά έγγραφα συντονίζονται μαζί.",
+          points: ["Τουρκία", "Βοσνία-Ερζεγοβίνη"]
         }
       ]
     },
@@ -328,6 +387,27 @@ export const dictionaries = {
             "Κοινοποιούνται η επιβεβαίωση παράδοσης, οι σημειώσεις παραλήπτη, ο έλεγχος ελλείψεων/ζημιών και τα απαραίτητα έγγραφα κλεισίματος."
         }
       ]
+    },
+    gallery: {
+      eyebrow: "Συλλογή πεδίου",
+      title: "Εικόνες φόρτωσης, οχημάτων και διαδρομών σε μία ροή.",
+      text:
+        "Φωτογραφίες και βίντεο από φορτηγά, φόρτωση και αποστολές συγκεντρώνονται σε καθαρή συλλογή με διατήρηση των διαφορετικών αναλογιών.",
+      mediaCount: "αρχεία μέσων",
+      showAll: "Προβολή όλων",
+      showLess: "Λιγότερα",
+      openLabel: "Άνοιγμα",
+      closeLabel: "Κλείσιμο",
+      filterLabel: "Φίλτρο συλλογής",
+      filters: {
+        all: "Όλα",
+        trucks: "Οχήματα",
+        loading: "Φόρτωση"
+      },
+      categories: {
+        trucks: "Όχημα",
+        loading: "Φόρτωση"
+      }
     },
     quote: {
       eyebrow: "Προσφορά και αποστολή",
@@ -377,6 +457,7 @@ export const dictionaries = {
       services: "Transport",
       routes: "Routes",
       process: "Operations",
+      gallery: "Gallery",
       contact: "Contact"
     },
     hero: {
@@ -390,7 +471,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "commercial cargo base" },
       { value: "Cargo fit", label: "document and route pre-check" },
-      { value: "TR / EU", label: "customs and route follow-up" }
+      { value: "Balkans / Europe", label: "border and route follow-up" }
     ],
     signals: ["C2-aligned operation", "K1 domestic leg", "U-ETDS data ready", "Special cargo pre-check"],
     capabilities: {
@@ -454,7 +535,7 @@ export const dictionaries = {
         title: "Turkey ↔ Greece",
         text:
           "Regular outbound and return follow-up on the Greece-Turkey lane; departure, border crossing, customs paperwork and delivery window are managed in one flow.",
-        stats: ["TR departure", "GR arrival", "Return lane"]
+        stats: ["Turkey departure", "Greece arrival", "Return lane"]
       },
       lanes: [
         {
@@ -464,22 +545,40 @@ export const dictionaries = {
           points: ["Greece", "Turkey"]
         },
         {
-          title: "Balkans and Europe lane",
+          title: "Turkey - Serbia",
           text:
-            "Route, paperwork and border progress are tracked for European deliveries through Balkan crossings.",
-          points: ["Balkans", "Europe"]
+            "For Turkey-origin Serbia loads, loading, border crossing and delivery timing are tracked in one operations flow.",
+          points: ["Turkey", "Serbia"]
         },
         {
-          title: "TR - Albania / Macedonia",
+          title: "Serbia - Kosovo",
           text:
-            "Partial or full-truckload plans are arranged from Turkey toward Albania and Macedonia.",
-          points: ["Turkey", "Albania", "Macedonia"]
+            "For Serbia-Kosovo connections, route, paperwork and unloading details are clarified before dispatch.",
+          points: ["Serbia", "Kosovo"]
         },
         {
-          title: "TR - Serbia / Kosovo / Montenegro / Bosnia and Herzegovina",
+          title: "Turkey - Albania",
           text:
-            "Loading and delivery timings are followed alongside border crossings for Serbia, Kosovo, Montenegro and Bosnia and Herzegovina lanes.",
-          points: ["Turkey", "Serbia", "Kosovo", "Montenegro", "Bosnia and Herzegovina"]
+            "For Turkey-origin Albania loads, border and delivery planning is prepared for full or partial cargo.",
+          points: ["Turkey", "Albania"]
+        },
+        {
+          title: "Albania - Montenegro",
+          text:
+            "For the Albania-Montenegro connection, intermediate crossings, consignee details and delivery window are tracked together.",
+          points: ["Albania", "Montenegro"]
+        },
+        {
+          title: "Turkey - Macedonia",
+          text:
+            "For Macedonia-bound loads, cargo type, route and border process are checked before dispatch.",
+          points: ["Turkey", "Macedonia"]
+        },
+        {
+          title: "Turkey - Bosnia and Herzegovina",
+          text:
+            "For the Bosnia and Herzegovina lane, long-haul routing, delivery address and customs paperwork are coordinated together.",
+          points: ["Turkey", "Bosnia and Herzegovina"]
         }
       ]
     },
@@ -504,6 +603,27 @@ export const dictionaries = {
           text: "Delivery confirmation, consignee notes, shortage/damage checks and closeout documents are shared."
         }
       ]
+    },
+    gallery: {
+      eyebrow: "Field gallery",
+      title: "Loading, fleet and route visuals in one operational stream.",
+      text:
+        "Photos and videos from trucks, loading points and shipments are collected in a clean gallery while keeping their different aspect ratios.",
+      mediaCount: "media items",
+      showAll: "Show all",
+      showLess: "Show less",
+      openLabel: "Open",
+      closeLabel: "Close",
+      filterLabel: "Gallery filter",
+      filters: {
+        all: "All",
+        trucks: "Vehicles",
+        loading: "Loading"
+      },
+      categories: {
+        trucks: "Vehicle",
+        loading: "Loading"
+      }
     },
     quote: {
       eyebrow: "Quote and dispatch",
@@ -549,6 +669,7 @@ export const dictionaries = {
       services: "Услуги",
       routes: "Маршруты",
       process: "Процесс",
+      gallery: "Галерея",
       contact: "Контакт"
     },
     hero: {
@@ -562,7 +683,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "коммерческая основа" },
       { value: "Пригодность груза", label: "проверка документов и маршрута" },
-      { value: "TR / EU", label: "таможня и маршрут" }
+      { value: "Балканы / Европа", label: "граница и маршрут" }
     ],
     signals: ["Операция C2", "Внутренний K1", "Данные U-ETDS", "Проверка спецгруза"],
     capabilities: {
@@ -618,7 +739,7 @@ export const dictionaries = {
         title: "Турция ↔ Греция",
         text:
           "На линии Греция-Турция регулярно отслеживаются рейс и обратная загрузка; выезд, граница, таможенные документы и окно доставки ведутся в одном процессе.",
-        stats: ["Выезд TR", "Прибытие GR", "Обратная линия"]
+        stats: ["Выезд из Турции", "Прибытие в Грецию", "Обратная линия"]
       },
       lanes: [
         {
@@ -628,22 +749,40 @@ export const dictionaries = {
           points: ["Греция", "Турция"]
         },
         {
-          title: "Балканы и Европа",
+          title: "Турция - Сербия",
           text:
-            "Для европейских доставок через Балканы отслеживаются маршрут, документы и прохождение границ.",
-          points: ["Балканы", "Европа"]
+            "На линии из Турции в Сербию загрузка, граница и время доставки отслеживаются в одном операционном процессе.",
+          points: ["Турция", "Сербия"]
         },
         {
-          title: "TR - Албания / Македония",
+          title: "Сербия - Косово",
           text:
-            "Для направлений из Турции в Албанию и Македонию планируется частичная или полная загрузка.",
-          points: ["Турция", "Албания", "Македония"]
+            "Для связки Сербия-Косово маршрут, документы и разгрузка уточняются до отправки.",
+          points: ["Сербия", "Косово"]
         },
         {
-          title: "TR - Сербия / Косово / Черногория / Босния и Герцеговина",
+          title: "Турция - Албания",
           text:
-            "На линиях Сербии, Косово, Черногории и Боснии и Герцеговины время загрузки и доставки отслеживается вместе с границами.",
-          points: ["Турция", "Сербия", "Косово", "Черногория", "Босния и Герцеговина"]
+            "Для грузов из Турции в Албанию заранее готовится план границы и доставки для полной или частичной загрузки.",
+          points: ["Турция", "Албания"]
+        },
+        {
+          title: "Албания - Черногория",
+          text:
+            "На связке Албания-Черногория вместе отслеживаются промежуточные переходы, данные получателя и окно доставки.",
+          points: ["Албания", "Черногория"]
+        },
+        {
+          title: "Турция - Македония",
+          text:
+            "Для направления в Македонию тип груза, маршрут и граница проверяются до отправки.",
+          points: ["Турция", "Македония"]
+        },
+        {
+          title: "Турция - Босния и Герцеговина",
+          text:
+            "На линии Боснии и Герцеговины длинный маршрут, адрес доставки и таможенные документы координируются вместе.",
+          points: ["Турция", "Босния и Герцеговина"]
         }
       ]
     },
@@ -656,6 +795,27 @@ export const dictionaries = {
         { title: "Загрузка", text: "Склад, водитель и операционная команда работают в едином потоке информации." },
         { title: "Отчет", text: "Подтверждение прибытия, заметки и нужные документы передаются при закрытии." }
       ]
+    },
+    gallery: {
+      eyebrow: "Галерея с рейсов",
+      title: "Погрузка, машины и маршруты в одной ленте.",
+      text:
+        "Фото и видео с машин, точек погрузки и отправок собраны в аккуратную галерею с сохранением разных пропорций.",
+      mediaCount: "медиафайла",
+      showAll: "Показать все",
+      showLess: "Показать меньше",
+      openLabel: "Открыть",
+      closeLabel: "Закрыть",
+      filterLabel: "Фильтр галереи",
+      filters: {
+        all: "Все",
+        trucks: "Машины",
+        loading: "Загрузка"
+      },
+      categories: {
+        trucks: "Машина",
+        loading: "Загрузка"
+      }
     },
     quote: {
       eyebrow: "Расчет и операция",
@@ -701,6 +861,7 @@ export const dictionaries = {
       services: "Leistungen",
       routes: "Routen",
       process: "Ablauf",
+      gallery: "Galerie",
       contact: "Kontakt"
     },
     hero: {
@@ -714,7 +875,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "gewerbliche Frachtbasis" },
       { value: "Fracht-Eignung", label: "Dokument- und Routenvorprufung" },
-      { value: "TR / EU", label: "Zoll und Route" }
+      { value: "Balkan / Europa", label: "Grenze und Route" }
     ],
     signals: ["C2-konforme Operation", "K1 Inlandsstrecke", "U-ETDS Daten", "Sonderfracht-Vorprufung"],
     capabilities: {
@@ -771,7 +932,7 @@ export const dictionaries = {
         title: "Turkei ↔ Griechenland",
         text:
           "Auf der Griechenland-Turkei-Linie werden Hin- und Rucklauf regelmaßig verfolgt; Abfahrt, Grenzubergang, Zollunterlagen und Lieferfenster laufen in einem Prozess.",
-        stats: ["TR Abfahrt", "GR Ankunft", "Rucklinie"]
+        stats: ["Turkei Abfahrt", "Griechenland Ankunft", "Rucklinie"]
       },
       lanes: [
         {
@@ -781,22 +942,40 @@ export const dictionaries = {
           points: ["Griechenland", "Turkei"]
         },
         {
-          title: "Balkan- und Europa-Linie",
+          title: "Turkei - Serbien",
           text:
-            "Fur Lieferungen nach Europa uber Balkanubergange werden Route, Unterlagen und Grenzstatus verfolgt.",
-          points: ["Balkan", "Europa"]
+            "Auf der Linie Turkei-Serbien werden Beladung, Grenzubergang und Lieferzeit in einem Operationsfluss verfolgt.",
+          points: ["Turkei", "Serbien"]
         },
         {
-          title: "TR - Albanien / Mazedonien",
+          title: "Serbien - Kosovo",
           text:
-            "Von der Turkei Richtung Albanien und Mazedonien werden Teil- oder Komplettladungen geplant.",
-          points: ["Turkei", "Albanien", "Mazedonien"]
+            "Fur die Verbindung Serbien-Kosovo werden Route, Unterlagen und Entladedaten vor der Abfahrt geklart.",
+          points: ["Serbien", "Kosovo"]
         },
         {
-          title: "TR - Serbien / Kosovo / Montenegro / Bosnien-Herzegowina",
+          title: "Turkei - Albanien",
           text:
-            "Auf den Linien Serbien, Kosovo, Montenegro und Bosnien-Herzegowina werden Lade- und Lieferzeiten zusammen mit Grenzubergangen verfolgt.",
-          points: ["Turkei", "Serbien", "Kosovo", "Montenegro", "Bosnien-Herzegowina"]
+            "Fur Ladungen aus der Turkei nach Albanien wird die Grenz- und Lieferplanung fur Teil- oder Komplettladung vorbereitet.",
+          points: ["Turkei", "Albanien"]
+        },
+        {
+          title: "Albanien - Montenegro",
+          text:
+            "Bei der Verbindung Albanien-Montenegro werden Zwischenubergange, Empfangerdaten und Lieferfenster gemeinsam verfolgt.",
+          points: ["Albanien", "Montenegro"]
+        },
+        {
+          title: "Turkei - Mazedonien",
+          text:
+            "Richtung Mazedonien werden Frachtart, Route und Grenzprozess vor der Abfahrt gepruft.",
+          points: ["Turkei", "Mazedonien"]
+        },
+        {
+          title: "Turkei - Bosnien-Herzegowina",
+          text:
+            "Auf der Linie Bosnien-Herzegowina werden Langstreckenroute, Lieferadresse und Zollunterlagen gemeinsam koordiniert.",
+          points: ["Turkei", "Bosnien-Herzegowina"]
         }
       ]
     },
@@ -809,6 +988,27 @@ export const dictionaries = {
         { title: "Beladung und Tracking", text: "Ladestelle, Fahrer und Operations-Team arbeiten uber einen gemeinsamen Informationsfluss." },
         { title: "Lieferbericht", text: "Ankunftsbestatigung, Liefernotizen und erforderliche Dokumente werden geteilt." }
       ]
+    },
+    gallery: {
+      eyebrow: "Einsatzgalerie",
+      title: "Beladung, Fahrzeuge und Routen in einem Ablauf.",
+      text:
+        "Fotos und Videos von Lkw, Ladestellen und Sendungen werden in einer klaren Galerie mit ihren unterschiedlichen Seitenverhaltnissen gesammelt.",
+      mediaCount: "Medien",
+      showAll: "Alle anzeigen",
+      showLess: "Weniger anzeigen",
+      openLabel: "Offnen",
+      closeLabel: "Schliessen",
+      filterLabel: "Galeriefilter",
+      filters: {
+        all: "Alle",
+        trucks: "Fahrzeuge",
+        loading: "Beladung"
+      },
+      categories: {
+        trucks: "Fahrzeug",
+        loading: "Beladung"
+      }
     },
     quote: {
       eyebrow: "Angebot und Operation",
@@ -854,6 +1054,7 @@ export const dictionaries = {
       services: "Servicii",
       routes: "Rute",
       process: "Proces",
+      gallery: "Galerie",
       contact: "Contact"
     },
     hero: {
@@ -867,7 +1068,7 @@ export const dictionaries = {
     stats: [
       { value: "C2 / K1", label: "baza marfa comerciala" },
       { value: "Potrivire marfa", label: "preverificare acte si ruta" },
-      { value: "TR / EU", label: "vama si ruta" }
+      { value: "Balcani / Europa", label: "frontiera si ruta" }
     ],
     signals: ["Operare C2", "Tronson K1", "Date U-ETDS", "Preverificare marfa speciala"],
     capabilities: {
@@ -924,7 +1125,7 @@ export const dictionaries = {
         title: "Turcia ↔ Grecia",
         text:
           "Pe linia Grecia-Turcia se urmareste constant tur-retur; plecarea, trecerea frontierei, actele vamale si fereastra de livrare sunt gestionate intr-un singur flux.",
-        stats: ["Plecare TR", "Sosire GR", "Linie retur"]
+        stats: ["Plecare Turcia", "Sosire Grecia", "Linie retur"]
       },
       lanes: [
         {
@@ -934,22 +1135,40 @@ export const dictionaries = {
           points: ["Grecia", "Turcia"]
         },
         {
-          title: "Linia Balcani si Europa",
+          title: "Turcia - Serbia",
           text:
-            "Pentru livrari europene prin treceri balcanice se urmaresc ruta, actele si procesul de frontiera.",
-          points: ["Balcani", "Europa"]
+            "Pe linia Turcia-Serbia, incarcarea, trecerea frontierei si ora livrarii sunt urmarite intr-un singur flux operational.",
+          points: ["Turcia", "Serbia"]
         },
         {
-          title: "TR - Albania / Macedonia",
+          title: "Serbia - Kosovo",
           text:
-            "Din Turcia catre Albania si Macedonia se planifica transport partial sau camion complet.",
-          points: ["Turcia", "Albania", "Macedonia"]
+            "Pentru conexiunea Serbia-Kosovo, ruta, actele si detaliile de descarcare se clarifica inainte de plecare.",
+          points: ["Serbia", "Kosovo"]
         },
         {
-          title: "TR - Serbia / Kosovo / Muntenegru / Bosnia si Hertegovina",
+          title: "Turcia - Albania",
           text:
-            "Pe liniile Serbia, Kosovo, Muntenegru si Bosnia si Hertegovina, incarcarea si livrarea sunt urmarite impreuna cu trecerile de frontiera.",
-          points: ["Turcia", "Serbia", "Kosovo", "Muntenegru", "Bosnia si Hertegovina"]
+            "Pentru incarcari din Turcia catre Albania se pregateste planul de frontiera si livrare pentru marfa partiala sau camion complet.",
+          points: ["Turcia", "Albania"]
+        },
+        {
+          title: "Albania - Muntenegru",
+          text:
+            "Pe conexiunea Albania-Muntenegru sunt urmarite trecerile intermediare, datele destinatarului si fereastra de livrare.",
+          points: ["Albania", "Muntenegru"]
+        },
+        {
+          title: "Turcia - Macedonia",
+          text:
+            "Pentru directia Macedonia, tipul de marfa, ruta si procesul de frontiera sunt verificate inainte de plecare.",
+          points: ["Turcia", "Macedonia"]
+        },
+        {
+          title: "Turcia - Bosnia si Hertegovina",
+          text:
+            "Pe linia Bosnia si Hertegovina, ruta lunga, adresa de livrare si actele vamale sunt coordonate impreuna.",
+          points: ["Turcia", "Bosnia si Hertegovina"]
         }
       ]
     },
@@ -962,6 +1181,27 @@ export const dictionaries = {
         { title: "Incarcare", text: "Locatia, soferul si echipa operationala lucreaza cu acelasi flux de informatii." },
         { title: "Raport", text: "Confirmarea sosirii, notele de livrare si documentele necesare sunt trimise la inchidere." }
       ]
+    },
+    gallery: {
+      eyebrow: "Galerie operationala",
+      title: "Incarcare, camioane si rute intr-un singur flux.",
+      text:
+        "Fotografiile si videoclipurile cu camioane, puncte de incarcare si livrari sunt pastrate intr-o galerie clara, cu proportiile lor diferite.",
+      mediaCount: "fisiere media",
+      showAll: "Afiseaza tot",
+      showLess: "Afiseaza mai putin",
+      openLabel: "Deschide",
+      closeLabel: "Inchide",
+      filterLabel: "Filtru galerie",
+      filters: {
+        all: "Toate",
+        trucks: "Vehicule",
+        loading: "Incarcare"
+      },
+      categories: {
+        trucks: "Vehicul",
+        loading: "Incarcare"
+      }
     },
     quote: {
       eyebrow: "Oferta si operatiuni",

@@ -17,6 +17,7 @@ const navItems = [
   { href: "#services", key: "services" },
   { href: "#routes", key: "routes" },
   { href: "#process", key: "process" },
+  { href: "#gallery", key: "gallery" },
   { href: "#contact", key: "contact" },
 ] as const;
 
@@ -126,12 +127,12 @@ export function Header() {
               aria-haspopup="listbox"
               aria-expanded={isLanguageOpen}
               aria-controls="language-menu"
+              aria-label={`Select language: ${activeLanguage.label}`}
               onClick={toggleLanguage}
             >
               <span className="flag" aria-hidden="true">
                 {activeLanguage.flag}
               </span>
-              <span>{activeLanguage.code}</span>
               <ChevronDown size={16} aria-hidden="true" />
             </button>
 

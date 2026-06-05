@@ -121,10 +121,11 @@
   width: 58px;
   height: 58px;
   border-radius: 999px;
-  color: var(--white);
-  background: var(--burgundy);
-  font-size: 1rem;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px rgba(122, 16, 36, 0.16);
+  font-size: 2rem;
   font-weight: 950;
+  line-height: 1;
 }
 
 .route-terminal span {

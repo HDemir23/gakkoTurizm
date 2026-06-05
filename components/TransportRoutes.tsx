@@ -20,7 +20,15 @@ type RouteLaneCard = RouteLane & {
   key: string;
 };
 
-const laneIcons: readonly LucideIcon[] = [ArrowRightLeft, Globe2, MapPinned, Truck];
+const laneIcons: readonly LucideIcon[] = [
+  ArrowRightLeft,
+  Truck,
+  RouteIcon,
+  MapPinned,
+  ArrowRightLeft,
+  Globe2,
+  Truck,
+];
 
 export function TransportRoutes() {
   const { dictionary } = useLanguage();
@@ -55,7 +63,7 @@ export function TransportRoutes() {
 
           <div className="route-primary-map" aria-hidden="true">
             <div className="route-terminal">
-              <strong>TR</strong>
+              <strong>🇹🇷</strong>
               <span>{dictionary.routes.primary.stats[0]}</span>
             </div>
 
@@ -66,7 +74,7 @@ export function TransportRoutes() {
             </div>
 
             <div className="route-terminal">
-              <strong>GR</strong>
+              <strong>🇬🇷</strong>
               <span>{dictionary.routes.primary.stats[1]}</span>
             </div>
           </div>
