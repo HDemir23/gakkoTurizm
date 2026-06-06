@@ -108,8 +108,8 @@ export const dictionaries = {
         },
         {
           title: "Türkiye - Kosova",
-          text: "Sırbistan üzerinden Kosova bağlantılarında rota, evrak ve boşaltma bilgisi sevkiyat öncesinde netleştirilir.",
-          points: ["Sırbistan", "Kosova"],
+          text: "Türkiye üzerinden Kosova bağlantılarında rota, evrak ve boşaltma bilgisi sevkiyat öncesinde netleştirilir.",
+          points: ["Türkiye", "Kosova"],
         },
         {
           title: "Türkiye - Arnavutluk",
@@ -117,9 +117,9 @@ export const dictionaries = {
           points: ["Türkiye", "Arnavutluk"],
         },
         {
-          title: "Arnavutluk - Karadağ",
-          text: "Arnavutluk-Karadağ bağlantısında ara geçişler, alıcı bilgisi ve teslim penceresi birlikte takip edilir.",
-          points: ["Arnavutluk", "Karadağ"],
+          title: "Türkiye - Karadağ",
+          text: "Türkiye-Karadağ bağlantısında ara geçişler, alıcı bilgisi ve teslim penceresi birlikte takip edilir.",
+          points: ["Türkiye", "Karadağ"],
         },
         {
           title: "Türkiye - Makedonya",
