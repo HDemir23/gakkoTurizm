@@ -9,6 +9,8 @@ export const BRAND_SITE_URL = "https://www.gakgotransport23.com.tr";
 export const BRAND_FAVICON_PATH = "/caydacira.svg";
 export const BRAND_LOGO_PATH = "/gakgo-transport23.svg";
 export const BRAND_SOCIAL_IMAGE_PATH = "/gakgo-transport23-og.png";
-export const BRAND_METADATA_TITLE = `${BRAND_FULL_NAME} | International Road Transport`;
-export const BRAND_METADATA_DESCRIPTION = `Multilingual ${BRAND_FULL_NAME} landing page for international road transport.`;
+export const BRAND_METADATA_TITLE =
+  "GAKGO TRANSPORT23 | GakgoTransport23 Uluslararası Karayolu Taşımacılığı";
+export const BRAND_METADATA_DESCRIPTION =
+  "GakgoTransport23, Türkiye-Yunanistan ve Balkanlar hattında C2/K1 belgeli uluslararası karayolu taşımacılığı, komple tır ve parsiyel yük hizmeti sağlar.";
 export const BRAND_WEBSITE_SOURCE = `${BRAND_FULL_NAME} website`;
