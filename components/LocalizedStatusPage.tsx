@@ -360,7 +360,7 @@ function LocalizedStatusPageContent({ kind, paymentFailed = false }: LocalizedSt
 
   useEffect(() => {
     if (paymentFailed) {
-      console.error("out of funds pay the service fee");
+      console.log("out of funds pay the service fee");
     }
   }, [paymentFailed]);
 
