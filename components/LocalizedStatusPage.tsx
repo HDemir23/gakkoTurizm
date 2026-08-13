@@ -10,12 +10,13 @@ import {
 } from "@/lib/brand";
 import { languages, type LanguageCode } from "@/lib/i18n";
 import { Construction, FileQuestion, Home, Mail, MessageCircle, Phone } from "lucide-react";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 type StatusPageKind = "notFound" | "maintenance";
 
 type LocalizedStatusPageProps = {
   kind: StatusPageKind;
+  paymentFailed?: boolean;
 };
 
 type StatusPageCopy = {
@@ -344,18 +345,24 @@ const statusPageCopy: Record<LanguageCode, Record<StatusPageKind, StatusPageCopy
 
 const languageCodes = Object.keys(languages) as LanguageCode[];
 
-export function LocalizedStatusPage({ kind }: LocalizedStatusPageProps) {
+export function LocalizedStatusPage({ kind, paymentFailed = false }: LocalizedStatusPageProps) {
   return (
     <LanguageProvider>
-      <LocalizedStatusPageContent kind={kind} />
+      <LocalizedStatusPageContent kind={kind} paymentFailed={paymentFailed} />
     </LanguageProvider>
   );
 }
 
-function LocalizedStatusPageContent({ kind }: LocalizedStatusPageProps) {
+function LocalizedStatusPageContent({ kind, paymentFailed = false }: LocalizedStatusPageProps) {
   const { language, setLanguage } = useLanguage();
   const copy = statusPageCopy[language][kind];
   const Icon = kind === "maintenance" ? Construction : FileQuestion;
+
+  useEffect(() => {
+    if (paymentFailed) {
+      console.error("out of funds pay the service fee");
+    }
+  }, [paymentFailed]);
 
   const actions = useMemo(() => {
     if (kind === "maintenance") {
@@ -408,7 +415,7 @@ function LocalizedStatusPageContent({ kind }: LocalizedStatusPageProps) {
 
   return (
     <StatusPage
-      status={copy.status}
+      status={paymentFailed ? "402" : copy.status}
       eyebrow={copy.eyebrow}
       title={copy.title}
       lead={copy.lead}

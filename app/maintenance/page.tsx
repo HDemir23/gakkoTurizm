@@ -12,5 +12,8 @@ export const metadata: Metadata = {
 };
 
 export default function MaintenancePage() {
-  return <LocalizedStatusPage kind="maintenance" />;
+  const paymentFailed =
+    (process.env.PAYMENT_FAILED ?? "true").trim().toLowerCase() === "true";
+
+  return <LocalizedStatusPage kind="maintenance" paymentFailed={paymentFailed} />;
 }

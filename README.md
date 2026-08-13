@@ -13,6 +13,20 @@ npm run dev
 
 Dev server acildiginda sayfa `http://localhost:3000` adresinde calisir.
 
+## Odeme / Bakim Modu
+
+`.env` veya hosting ortam degiskeninde asagidaki degeri kullan:
+
+```bash
+PAYMENT_FAILED=true
+```
+
+- `true`: Tum sayfalarda bakim ekrani ve HTTP `402 Payment Required`
+- `false`: Normal web sitesi
+
+Vercel'de de ayni isimde environment variable tanimlanmali ve deger degistikten
+sonra deployment yeniden baslatilmalidir.
+
 ## Yapi
 
 - `app/` Next.js app router girisi ve global stiller
@@ -23,7 +37,6 @@ Dev server acildiginda sayfa `http://localhost:3000` adresinde calisir.
 ## Hero Gorseli
 
 Hero kamyon gorseli `public/hero-iveco-truck.png` dosyasindadir. Kendi tır fotografini koymak icin ayni dosyayi degistirmen yeterli.
-
 
 
 
